@@ -53,7 +53,7 @@ de instalarlo en la ubicación defecto.
 
 
 ## Instalación Software
-Para descargar la última versión de *Huit Logistics* dirgiase al repositorio oficial
+Para descargar la última versión de *Huit Logistics* diríjase al repositorio oficial
 de la herramienta en <https://github.com/macanepa/logistics-solver-GO/releases>. Seleccione
 la última versión de la herramienta y descargue *Source Code*.
 
