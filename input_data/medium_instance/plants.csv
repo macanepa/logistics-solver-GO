@@ -1,4 +1,0 @@
-PlantID;RegionID;PlantHandlingCostPerContainerAutomatic;PlantHandlingCostPerContainerManual
-Plant001;Region001;20;50
-Plant002;Region002;0;50
-Plant003;Region002;15;35

@@ -1,5 +1,5 @@
-id;location
-1;Moxconn
-2;Virat
-3;Lestica
-4;Finpul
+id;location;item001;item002;item003;item004
+supplier001;Moxconn;4000;4000;6000;2000
+supplier002;Virat;4000;2000;0;4000
+supplier003;Lestica;3000;4000;4000;4000
+supplier004;Finpul;3000;3000;2000;2000

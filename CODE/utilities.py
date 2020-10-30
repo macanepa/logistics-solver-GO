@@ -2,7 +2,7 @@ import os
 import sys
 from pprint import pprint
 from pathlib import Path
-import csv
+import xlwt
 
 import model2
 import mcutils as mc
@@ -29,8 +29,6 @@ class Data:
 
 def initialize_directories():
     current_directories = os.listdir(ConfigFiles.FIXED_DIRECTORIES['working_dir'])
-    print(current_directories)
-    #mc.exit_application()
     for directory_name in ConfigFiles.FIXED_DIRECTORIES:
         if directory_name == 'working_dir':
             continue
@@ -130,7 +128,7 @@ def import_data():
 
     exclude = []
     for file_name in path_dirs:
-        mc.mcprint(text='Importing data from {}\r'.format(file_name), color=mc.Color.GREEN)
+        print(f"Importing data from {mc.Color.CYAN}{file_name}{mc.Color.RESET}... ", end='')
         path = path_dirs[file_name]
         with open(path) as file:
             object_data = {}
@@ -158,207 +156,11 @@ def import_data():
                         object_data["_".join([file_name.split(".")[0]] + split[:2])][headers[index]] = attribute
         mc.mcprint(text='Completed!', color=mc.Color.GREEN)
         Data.INPUT_DATA[file_name.split(".")[0]] = object_data
-    pprint(Data.INPUT_DATA)
+
     if len(Data.INPUT_DATA) == 0:
         raise Exception("No compatible data has been found. "
                         "Please please insert valid data or change the input data directory")
 
-
-def create_parameters():
-    data = Data.INPUT_DATA
-
-    if len(data.keys()) == 0:
-        raise Exception("There is no data")
-
-    # Generating: Plants
-    mc.mcprint(text="Generating Plants")
-    ra_a = {}
-    for plant in data['plants']:
-        ra_a[plant] = data['plants'][plant]['RegionID']
-
-    # Generating: Suppliers
-    mc.mcprint(text="Generating Suppliers")
-    rs_s = {}
-    for supplier in data['suppliers']:
-        rs_s[supplier] = data['suppliers'][supplier]['RegionID']
-
-    # Generating: Region of Reception (assuming region of reception == region of closest plant)
-    mc.mcprint(text="Generating Region of Reception")
-    rr_r = {}
-    pl_ra = {}
-    for reception in data['receptions']:
-        closest_plant = data['receptions'][reception]['ClosestAssemblyPlant']
-        for plant in data['plants']:
-            pl_ra[(reception, plant)] = 0
-            if plant == closest_plant:
-                rr_r[reception] = data['plants'][plant]['RegionID']
-                pl_ra[(reception, plant)] = 1
-
-    # Generating: Supplier Stock
-    mc.mcprint(text="Generating Supplier Stock")
-    s_s = {}
-    for supplier in data['suppliers']:
-        s_s[supplier] = int(data['suppliers'][supplier]['ItemAvailability'])
-
-    # Generating: Demand
-    mc.mcprint(text="Generating Demand")
-    m_ap = {}
-    for order_id in data['orders']:
-        order = data['orders'][order_id]
-        item_id = order['ItemID']
-        if item_id in data['items'].keys():
-            m_ap[(order['PlantID'], item_id)] = int(order['NumItemsOrdered'])
-        else:
-            error_message = "{} includes {} but this item has not been declared in the input file".format(order_id,
-                                                                                                          item_id)
-            raise Exception(error_message)
-
-    # Generating: Tax Supplier -> Reception (changing region)
-    mc.mcprint(text="Generating Tax Supplier -> Reception (changing region)")
-    t_sd = {}
-    for supplier in rs_s:
-        for reception in rr_r:
-            coordinate = [rr_r[reception], rs_s[supplier]]
-            id_ = "_".join(['surcharge'] + coordinate)
-            if id_ in data['surcharge'].keys():
-                t_sd[(supplier, reception)] = float(data['surcharge'][id_]['TaxPerContainer'].replace(",", "."))
-            else:
-                t_sd[(supplier, reception)] = 0
-
-    # Generating: Cost of Item (in supplier)
-    mc.mcprint(text="Generating Cost of Item (in supplier)")
-    cs_sp = {}
-    for supplier in data['suppliers']:
-        item = data['suppliers'][supplier]['ItemProduced']
-        cs_sp[(supplier, item)] = int(data['suppliers'][supplier]['UnitItemCost'])
-
-    # Generating: Cost from Reception -> Supplier (includes taxes)
-    mc.mcprint(text="Generating Cost from Reception -> Supplier (includes taxes)")
-    corridor_types = [
-        'Automatic',
-        'Manual',
-        'Subcontractor',
-        ]
-    cor = corridor_types
-    k_daj = {}
-    for corridor in data['corridor']:
-        if not len(corridor.split("_")) > 1:
-            continue
-        reception, plant = corridor.split("_")[1:]
-        for corridor_type in corridor_types:
-            corridor_real_type = corridor_type
-            corridor_type = "TransportationCostPerContainer" + corridor_type
-            total_cost = int(data['corridor'][corridor][corridor_type])
-            if corridor_type == corridor_types[2]:
-                total_cost += float(data['corridor'][corridor]['TaxPerContainer'].replace(",", "."))
-            k_daj[(reception, plant, corridor_real_type)] = total_cost
-
-    # Generating: Handling Cost at Plant
-    mc.mcprint(text="Generating Handling Cost at Plant")
-    cd_aj = {}
-    for plant in data['plants']:
-        for corridor_type in corridor_types:
-            id_ = "PlantHandlingCostPerContainer" + corridor_type
-            cd_aj[(plant, corridor_type)] = 0
-            if id_ in data['plants'][plant].keys():
-                cd_aj[(plant, corridor_type)] = float(data['plants'][plant][id_].replace(",", "."))
-
-    # Generating: Handling Cost at Reception
-    mc.mcprint(text="Generating Handling Cost at Reception")
-    cd_dj = {}
-    for reception in data['receptions']:
-        for corridor_type in corridor_types:
-            cd_dj[(reception, corridor_type)] = 0
-            id_ = "ReceptionHandlingCostPerContainer" + corridor_type
-            if id_ in data['receptions'][reception].keys():
-                cd_dj[(reception, corridor_type)] = float(data['receptions'][reception][id_].replace(",", "."))
-
-    # Generating: Transportation Cost from Supplier -> Reception
-    mc.mcprint(text="Generating Transportation Cost from Supplier -> Reception")
-    ld_sd = {}
-    for supplier in data['suppliers']:
-        for reception in data['receptions']:
-            id_ = "_".join(["route_supplier"] + [supplier, reception])
-            if id_ not in data['route_supplier'].keys():
-                continue
-            ld_sd[(supplier, reception)] = int(data['route_supplier'][id_]['TransportationCostPerContainer'])
-
-    # Generating: Weight for Item
-    mc.mcprint(text="Generating Weight for Item")
-    f_p = {}
-    for item in data['items']:
-        f_p[item] = float(data['items'][item]['UnitWeight'])
-
-    # Generating: Max Number of Items per Container
-    mc.mcprint(text="Generating Max Number of Items per Container")
-    w_p = {}
-    for item in data['items']:
-        w_p[item] = int(data['items'][item]['MaximumNumPerContainer'])
-
-    # Generating: Max Number of Container from reception -> Pant (using automatic corridor)
-    mc.mcprint(text="Generating Max Number of Container from reception -> Pant (using automatic corridor)")
-    rca_d = {}
-    for reception in data['receptions']:
-        rca_d[reception] = int(data['receptions'][reception]['ReceptionMaxNumOfContainersAutomatic'])
-
-    # Generating: Max Weight from Reception -> Plant (using corridor automatic)
-    mc.mcprint(text="Generating Max Weight from Reception -> Plant (using corridor automatic)")
-    rwa_d = {}
-    for reception in data['receptions']:
-        rwa_d[reception] = float(data['receptions'][reception]['ReceptionMaxSumOfWeightsAutomatic'].replace(",", "."))
-
-    # Generating: Max Number of Container from Reception -> Plant (using corridor manual)
-    mc.mcprint(text="Generating Max Number of Container from Reception -> Plant (using corridor manual)")
-    rcm_d = {}
-    for reception in data['receptions']:
-        rcm_d[reception] = int(data['receptions'][reception]['ReceptionMaxNumOfContainersManual'])
-
-    # Generating: Max Number of Items from Reception -> Plant (using corridor manual)
-    mc.mcprint(text="Generating Max Number of Items from Reception -> Plant (using corridor manual)")
-    rim_d = {}
-    for reception in data['receptions']:
-        rim_d[reception] = int(data['receptions'][reception]['ReceptionMaxNumOfItemsManual'])
-
-    # Generating: Binary can send from Reception -> Plant (using corridor ?)
-    mc.mcprint(text="Generating Binary can send from Reception -> Plant (using corridor ?)")
-    e_da = {}
-    for reception in data['receptions']:
-        for plant in data['plants']:
-            e_da[(reception, plant)] = 0
-    for reception in data['receptions']:
-        plant = data['receptions'][reception]['ClosestAssemblyPlant'].replace("Assembly", "")
-        e_da[(reception, plant)] = 1
-
-    # Generating: Binary can Item use Corridor automatic?
-    mc.mcprint(text="Generating Binary can Item use Corridor automatic?")
-    i_i = {}
-    for item in data['items']:
-        is_automatic_compatible = int(data['items'][item]['IsAutomaticCompatible'])
-        i_i[item] = 1 if is_automatic_compatible > 0 else 0
-
-    Data.PARAMETERS = {
-        'RAa':  ra_a,  # Region of plant a
-        'RRr':  rr_r,  # Region of reception r
-        'RSs':  rs_s,  # Region of supplier s
-        'PLra': pl_ra,
-        'Ss':   s_s,
-        'Map':  m_ap,
-        'Tsd':  t_sd,
-        'CSsp': cs_sp,
-        'Kdaj': k_daj,
-        'CDaj': cd_aj,
-        'CDdj': cd_dj,
-        'LDsd': ld_sd,
-        'Fp':   f_p,
-        'Wp':   w_p,
-        'RCAd': rca_d,
-        'RWAd': rwa_d,
-        'RCMd': rcm_d,
-        'RIMd': rim_d,
-        'Eda':  e_da,
-        'COR':  cor,
-        'Ii':   i_i,
-        }
 
 def create_parameters():
     data = Data.INPUT_DATA
@@ -371,11 +173,10 @@ def create_parameters():
     D_kpt = {}
     locations = {'demand_london': 'destination001'}
     for demand_location in list(filter(lambda x: x in locations, Data.INPUT_DATA)):
-        mc.mcprint(locations[demand_location], color=mc.Color.CYAN)
         for time in Data.INPUT_DATA[demand_location]:
             for item in Data.INPUT_DATA[demand_location][time]:
-                for demand in Data.INPUT_DATA[demand_location][time][item]:
-                    D_kpt[(locations[demand_location], item, time)] = demand
+                demand = Data.INPUT_DATA[demand_location][time][item]
+                D_kpt[(locations[demand_location], item, time)] = demand
 
     # Generating: Truck capacity
     mc.mcprint(text="Generating: Truck capacity")
@@ -397,13 +198,22 @@ def create_parameters():
             SC_sp[(supplier, item)] = Data.INPUT_DATA['supplier'][supplier][item]
 
 
+    # Fixed Variables
+    # Generating: y_jt
+    mc.mcprint(text="Generating: Supplier capacity")
+    y_jt = {}
+    for warehouse in Data.INPUT_DATA['y_jt']:
+        y_jt[(warehouse, Data.INPUT_DATA['y_jt'][warehouse]['time'])] = Data.INPUT_DATA['y_jt'][warehouse]['value']
+
+
     Data.PARAMETERS = {
         'D_kpt':   D_kpt,
         'Cap_p':   Cap_p,
         'SC_sp': SC_sp,
-        }
 
-    display_parameters()
+        # Fixed Variables
+        'y_jt': y_jt,
+        }
 
 
 def select_input_data_folder():
@@ -439,10 +249,10 @@ def import_input_data(select_new_folder=False):
         select_input_data_folder() if select_new_folder else None
         mc.mcprint(text="Importing raw data", color=mc.Color.ORANGE)
         import_data()
-        mc.mcprint(text="The data has been imported successfully", color=mc.Color.GREEN)
+        mc.mcprint(text="The data has been imported successfully\n", color=mc.Color.GREEN)
         mc.mcprint(text="Generating parameters from input data", color=mc.Color.ORANGE)
         create_parameters()
-        mc.mcprint(text="Parameters has been generated successfully", color=mc.Color.GREEN)
+        mc.mcprint(text="Parameters has been generated successfully\n", color=mc.Color.GREEN)
         mc.mcprint(text="Constructing Model", color=mc.Color.ORANGE)
         construct_model()
     except Exception as e:
@@ -459,6 +269,35 @@ def open_simulation():
                color=mc.Color.PINK)
     mc.DirectoryManager.open_file(mc.DirectoryManager([simulation_folder_path]), simulation_file_path)
 
+def save_output():
+    output_file_name = 'solver_output.xls'
+    mc.mcprint(text=f'Attempting to save {output_file_name}',
+               color=mc.Color.YELLOW)
+    wb = xlwt.Workbook()
+    ws = wb.add_sheet('sheet1')
+
+    ws.write(0, 1, 'Demanda')
+    ws.write(1, 0, 'c1')
+    ws.write(2, 0, 'c2')
+
+    ws.write(1, 1, 15)
+    ws.write(2, 1, 25)
+
+    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'solver_output.xls')
+    try:
+        wb.save(path)
+        mc.mcprint(text=f'{output_file_name} saved successfully',
+                   color=mc.Color.GREEN)
+    except PermissionError:
+        mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
+        return
+
+    mf_open_simulation = mc.MenuFunction(title='Yes', function=open_simulation)
+    simulation_menu = mc.Menu(title='Would you like to open a simulation with the results?',
+                              options=[mf_open_simulation, 'No'],
+                              back=False)
+    simulation_menu.show()
+
 
 def optimize():
     # Only if model has been created properly
@@ -471,12 +310,7 @@ def optimize():
         model2.display_optimal_information()
         os.chdir(ConfigFiles.FIXED_DIRECTORIES['working_dir'])  # Head back to original working directory
         print(mc.Color.RESET)
-
-        mf_open_simulation = mc.MenuFunction(title='Yes', function=open_simulation)
-        simulation_menu = mc.Menu(title='Would you like to open a simulation with the results?',
-                                  options=[mf_open_simulation, 'No'],
-                                  back=False)
-        simulation_menu.show()
+        save_output()
     else:
         mc.register_error(error_string="The model hasn't been created properly")
 
@@ -493,3 +327,12 @@ def construct_model():
 
 def display_parameters():
     pprint(Data.PARAMETERS)
+
+
+def read_manual(path=None):
+    if path:
+        print("nice")
+    directory_path = ConfigFiles.FIXED_DIRECTORIES['working_dir']
+    file_path = os.path.join(directory_path, 'README.pdf')
+    dir_manager = mc.DirectoryManager([directory_path])
+    dir_manager.open_file(file_path)
