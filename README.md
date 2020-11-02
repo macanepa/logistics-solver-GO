@@ -52,6 +52,13 @@ haga click en la opción *Add SCIPOptSuite to the system PATH for all users*. As
 de instalarlo en la ubicación defecto.
 
 
+Finalmente genere una variable llamada *SCIPOPTDIR* cuyo valor sea el directorio de instalación.
+La ubicación defecto es "C:\Program Files\SCIPOptSuite 7.0.1". Para ello en un terminal ingrese el
+siguiente comando.
+
+SETX SCIPOPTDIR "C:\Program Files\SCIPOptSuite 7.0.1"
+
+
 ## Instalación Software
 Para descargar la última versión de *Huit Logistics* diríjase al repositorio oficial
 de la herramienta en <https://github.com/macanepa/logistics-solver-GO/releases>. Seleccione

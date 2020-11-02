@@ -1,7 +1,7 @@
 STATISTICS
   Problem name     : Model_Team_8
   Variables        : 169 (8 binary, 160 integer, 0 implicit integer, 1 continuous)
-  Constraints      : 0 initial, 256 maximal
+  Constraints      : 256 initial, 256 maximal
 OBJECTIVE
   Sense            : minimize
 VARIABLES
