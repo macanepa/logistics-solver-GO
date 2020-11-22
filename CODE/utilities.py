@@ -10,6 +10,8 @@ import mcutils as mc
 
 class ConfigFiles:
     working_dir = Path(os.path.abspath(__file__)).parent.parent
+    working_dir = Path(os.getcwd()).parent
+
     input_data_path = os.path.join(working_dir, 'input_data')
     output_path = os.path.join(working_dir, 'output')
     simulation_path = os.path.join(working_dir, 'simulation_model')

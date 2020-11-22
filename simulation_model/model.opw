@@ -1,0 +1,110 @@
+[RESOURCES]
+[VARIABLES]
+costototalAlmacenamiento
+ventas
+Pasa si no supera capacidad Video C tailandia.NumberOut False
+RX III china
+Pasa si no supera capacidad Video C tailandia.NumberOut True
+SWITCHES china
+Dispose 6.NumberOut
+quiero almacenar?.NumberOut True
+quiero almacenar??.NumberOut True
+Separate 4.NumberOut Dup
+Cargando camiones con 200 RX III.NumberIn
+Cargando camiones con 150 SX III.NumberIn
+quiero almacenar??.NumberOut False
+Cargando camiones con 200 RX III.NumberOut
+Cargando camiones con 150 SX III.NumberOut
+ubicaion warehouse 1 o 2.NumberOut True
+Cargando camiones con 100 Video C.NumberIn
+Si supera capacidad tailandia.NumberOut
+Cargando camiones con 100 Video C.NumberOut
+Separate 5.NumberOut Orig
+Warehouse destino4.NumberOut False
+Warehouse destino3.NumberOut False
+Warehouse destino2.NumberOut False
+Separate 3.NumberOut Orig
+Cargando camiones con 300 Switches.NumberIn
+Cargando camiones con 300 Switches.NumberOut
+Warehouse destino4.NumberOut True
+Warehouse destino3.NumberOut True
+Warehouse destino2.NumberOut True
+Si supera capacidad india.NumberOut
+costoTotalLeg2
+costoTotalleg1
+tiempo llegada a warehouse.NumberIn
+tiempo llegada a warehouse.NumberOut
+Pasa si no supera capacidad Video C malasia.NumberOut True
+CostoAlmacenamiento
+Separate 4.NumberOut Orig
+Separate 7.NumberOut Dup
+Pasa si no supera capacidad Video C malasia.NumberOut False
+Video C china
+costotransporteLeg2
+Pasa si no supera capacidad Switches malasia.NumberOut False
+Separate 6.NumberOut Dup
+Pasa si no supera capacidad RX III china.NumberOut False
+Pasa si no supera capacidad SX III china.NumberOut False
+RX III india
+Video C malasia
+SX III china
+Pasa si no supera capacidad RX III tailandia.NumberOut False
+Pasa si no supera capacidad RX III china.NumberOut True
+Pasa si no supera capacidad SX III china.NumberOut True
+Pasa si no supera capacidad Switches malasia.NumberOut True
+Separate 5.NumberOut Dup
+SX III india
+Separate 8.NumberOut Dup
+Separate 2.NumberOut Dup
+Pasa si no supera capacidad RX III malasia.NumberOut True
+Pasa si no supera capacidad SX III malasia.NumberOut True
+Separate 6.NumberOut Orig
+fabrica malasia.NumberOut
+Pasa si no supera capacidad Video C china.NumberOut True
+Separate 1.NumberOut Orig
+Pasa si no supera capacidad Video C china.NumberOut False
+Pasa si no supera capacidad RX III india.NumberOut True
+Pasa si no supera capacidad SX III india.NumberOut True
+Pasa si no supera capacidad RX III malasia.NumberOut False
+Pasa si no supera capacidad SX III malasia.NumberOut False
+Dispose 1.NumberOut
+CostoProduccion
+Separate 8.NumberOut Orig
+Pasa si no supera capacidad RX III india.NumberOut False
+Pasa si no supera capacidad SX III india.NumberOut False
+quiero almacenar?.NumberOut False
+Dispose 5.NumberOut
+CostoProductox
+Si supera capacidad china.NumberOut
+SX III tailandia
+Separate 2.NumberOut Orig
+fabrica china.NumberOut
+Pasa si no supera capacidad SX III tailandia.NumberOut False
+fabrica india.NumberOut
+SWITCHES tailandia
+Pasa si no supera capacidad Switches tailandia.NumberOut False
+Pasa si no supera capacidad Switches tailandia.NumberOut True
+Video C tailandia
+tiempo llegada a cliente.NumberOut
+costoFijo
+Separate 1.NumberOut Dup
+tiempo llegada a cliente.NumberIn
+Pasa si no supera capacidad Switches china.NumberOut True
+Pasa si no supera capacidad Switches india.NumberOut True
+Warehouse destino.NumberOut False
+SX III malasia
+fabrica tailandia.NumberOut
+Pasa si no supera capacidad Switches china.NumberOut False
+Pasa si no supera capacidad Switches india.NumberOut False
+Separate 7.NumberOut Orig
+Warehouse destino.NumberOut True
+Pasa si no supera capacidad RX III tailandia.NumberOut True
+Pasa si no supera capacidad SX III tailandia.NumberOut True
+ubicaion warehouse 1 o 2.NumberOut False
+RX III malasia
+SWITCHES malasia
+RX III tailandia
+Separate 3.NumberOut Dup
+SWITCHES india
+Si supera capacidad malasia.NumberOut
+CostoTransporte
