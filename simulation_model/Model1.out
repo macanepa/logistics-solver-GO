@@ -1,0 +1,45 @@
+SIMAN Run Controller.
+
+58.887351 Hours>
+                                      ARENA Simulation Results
+                                      matias - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date :11/23/2020
+Analyst: matias                                                      Model revision date:11/23/2020
+
+Replication ended at time      : 58.887351 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                                 --         --         --         --          0
+Entity 1.NVATime                                --         --         --         --          0
+Entity 1.WaitTime                               --         --         --         --          0
+Entity 1.TranTime                               --         --         --         --          0
+Entity 1.OtherTime                              --         --         --         --          0
+Entity 1.TotalTime                              --         --         --         --          0
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                13.671     (Insuf)    .00000     15.000     15.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           15.000    
+Entity 1.NumberOut                          .00000    
+System.NumberOut                            .00000    
+
+
+Simulation run time: 0.17 minutes.
+Simulation run complete.
