@@ -266,7 +266,7 @@ def import_input_data(select_new_folder=False):
 
 def open_simulation():
     simulation_folder_path = ConfigFiles.FIXED_DIRECTORIES['simulation_model']
-    simulation_file_path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'model.doe')
+    simulation_file_path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'videoconferencing final.doe')
     mc.mcprint(text="Creating Simulation",
                color=mc.Color.PINK)
     mc.DirectoryManager.open_file(mc.DirectoryManager([simulation_folder_path]), simulation_file_path)
@@ -282,8 +282,8 @@ def save_output():
     ws.write(1, 0, 'c1')
     ws.write(2, 0, 'c2')
 
-    ws.write(1, 1, 15)
-    ws.write(2, 1, 25)
+    ws.write(1, 1, 350)
+    ws.write(2, 1, 250)
 
     path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'solver_output.xls')
     try:
@@ -295,7 +295,8 @@ def save_output():
         return
 
     mf_open_simulation = mc.MenuFunction(title='Yes', function=open_simulation)
-    simulation_menu = mc.Menu(title='Would you like to open a simulation with the results?',
+    simulation_menu = mc.Menu(title=f'Would you like to open a simulation with the results?\n'
+                                    f'{mc.Color.RED}    Wait for the splash screen to vanish{mc.Color.RESET}',
                               options=[mf_open_simulation, 'No'],
                               back=False)
     simulation_menu.show()

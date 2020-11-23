@@ -42,4 +42,4 @@ nuestro equipo de soporte al correo electrónico
 
 ## Manual de Usuario
 El manual de usuario se encuentra en un formato de video. Para visualizarlo, diríjase a la
-siguiente página web <https://www.youtube.com/watch?v=1WEMQMlHA24&feature=youtu.be&ab_channel=MatiasCanepaGonzalez >
+siguiente página web <https://youtu.be/b91LlJ3qSOk>

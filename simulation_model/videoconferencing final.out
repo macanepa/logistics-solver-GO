@@ -1,0 +1,52 @@
+
+                                      ARENA Simulation Results
+                                      matias - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date :11/23/2020
+Analyst: kike garcia                                                 Model revision date:11/23/2020
+
+Replication ended at time      : 3650.0 Days 
+Base Time Units: Days
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                                 --         --         --         --          0
+Entity 1.NVATime                                --         --         --         --          0
+Entity 1.WaitTime                               --         --         --         --          0
+Entity 1.TranTime                               --         --         --         --          0
+Entity 1.OtherTime                              --         --         --         --          0
+Entity 1.TotalTime                              --         --         --         --          0
+VConfer.VATime                              1.3807     .46009     .00000     11.010        370    
+VConfer.NVATime                             .00000     .00000     .00000     .00000        370    
+VConfer.WaitTime                            .00000     .00000     .00000     .00000        370    
+VConfer.TranTime                            .00000     .00000     .00000     .00000        370    
+VConfer.OtherTime                           .00000     .00000     .00000     .00000        370    
+VConfer.TotalTime                           1.3807     .46009     .00000     11.010        370    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                .00000     (Insuf)    .00000     .00000     .00000    
+VConfer.WIP                                 .13996     (Insuf)    .00000     65.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           .00000    
+Entity 1.NumberOut                          .00000    
+VConfer.NumberIn                            370.00    
+VConfer.NumberOut                           370.00    
+System.NumberOut                            370.00    
+
+
+Simulation run time: 0.05 minutes.
+Simulation run complete.

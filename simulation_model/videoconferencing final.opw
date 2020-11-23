@@ -1,0 +1,71 @@
+[RESOURCES]
+[VARIABLES]
+alm VConfer London
+costototalAlmacenamiento
+ventas
+Cant Moscow desde W Eu
+Fabricación.NumberOut
+Dispose 6.NumberOut
+quiero almacenar?.NumberOut True
+london Cant Lon
+Cant Lon desde W Eu
+VConfer 2 tailandia
+VConfer india
+ubicaion warehouse 1 o 2.NumberOut True
+Separate 5.NumberOut Orig
+Cant Rome desde W Eu
+london Cant Paris
+CantidadVConfer2India
+Cant Helsinki desde W Eu
+VConfer bodega
+CantidadVConfer2China
+costoTotalLeg2
+costoTotalleg1
+tiempo llegada a warehouse.NumberIn
+tiempo llegada a warehouse.NumberOut
+CostoAlmacenamiento
+CantidadVConfer2Tailandia
+london Cant Kiev
+costotransporteLeg2
+VConfer bodega london
+Separate 5.NumberOut Dup
+london Cant Ams
+CantidadVConferTailandia
+CantidadVConferIndia
+total london VConfer
+total VConfer
+Separate 1.NumberOut Orig
+Dispose 1.NumberOut
+cuánto se va almacenar en london??.NumberOut True
+CostoProduccion
+london Cant Moscow
+VConfer tailandia
+quiero almacenar?.NumberOut False
+Dispose 5.NumberOut
+VConfer 2 malasia
+london Cant Rome
+CostoProductox
+VConfer china
+Dispose 13.NumberOut
+Cant Stockholm desde W Eu
+alm VConfer
+Cant Paris desde W Eu
+Cant Kiev desde W Eu
+london Cant Stockholm
+VConfer 2 china
+tiempo llegada a cliente.NumberOut
+costoFijo
+Separate 1.NumberOut Dup
+london Cant Helsinki
+tiempo llegada a cliente.NumberIn
+Cargando camiones con 100 VConfer.NumberOut
+Cargando camiones con 100 VConfer.NumberIn
+CantidadVConferMalasia
+Cant Ams desde W Eu
+CantidadVConferChina
+ubicaion warehouse 1 o 2.NumberOut False
+VConfer malasia
+VConfer 2 india
+cuánto se va almacenar en london??.NumberOut False
+CantidadVConfer2Malasia
+CostoTransporte
