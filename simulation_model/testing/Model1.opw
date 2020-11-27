@@ -1,0 +1,6 @@
+[RESOURCES]
+[VARIABLES]
+v.period
+v.testing
+Create 1.NumberOut
+Dispose 1.NumberOut
