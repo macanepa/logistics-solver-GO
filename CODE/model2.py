@@ -6,12 +6,15 @@ import mcutils as mc
 
 class Model:
     model = pyscipopt.Model("Model_Team_8")
-
+    results = None
+    data = None
+    parameters = None
 
 def build_model(data, parameters):
     Model.model = pyscipopt.Model("Model_Team_8")
     model = Model.model
-
+    Model.data = data
+    Model.parameters = parameters
     # Aux
     MAX_TIME = 3
     big_m = 9999999
@@ -19,18 +22,28 @@ def build_model(data, parameters):
 
     # Variable Declarations
     mc.mcprint(text='Constructing Variables', color=mc.Color.GREEN)
-    x_sjpt = {}  # Quantity transfered of product p from supplier s to storage j in time t
-    q_sjpt = {}  # Quantity transfered of containers of product p from supplier s to storage j in time t
-    y_jt = {}  # 1 if storage j is open in time t else 0
-    z_jt = {}  # 1 if storage j is operative in time t else 0
-    w_jkpt = {}  # Quantity transfered of product p from storage j to destination k in time t
-    s_jpt = {}  # Quantity of product p stored in storage j in time t
+    x_sjpt = {}  # Quantity arrived of product p from supplier s to warehouse j in time t
+    l_sjpt = {}  # Quantity ordered of product p from supplier s to warehouse j in time t
+    q_sjpt = {}  # Quantity arrived of containers of product p from supplier s to warehouse j in time t
+    y_jt = {}  # 1 if warehouse j is open in time t else 0
+    z_jt = {}  # 1 if warehouse j is operative in time t else 0
+    w_jkpt = {}  # Quantity transfered of product p from warehouse j to destination k in time t
+    s_jpt = {}  # Quantity of product p stored in warehouse j in time t
 
-    mc.mcprint(text='Constructing Variable X & Q')
+    mc.mcprint(text='Constructing Variable Lsjpt: Quantity ordered of product p from supplier s to warehouse j in time t\n'
+                    'Constructing Variable Xsjpt: Quantity arrived of product p from supplier s to warehouse j in time t\n'
+                    'Constructing Variable Qsjpt: Quantity arrived of containers of product p from supplier s to warehouse j in time t')
+
     for supplier in data['supplier']:
         for warehouse in data['warehouse']:
             for item in data['item']:
                 for time in range(1, MAX_TIME):
+                    lead_time = time - parameters['LT1_sj'][(supplier, warehouse)]
+                    variable_name = f'L[{supplier}][{warehouse}][{item}][{lead_time}]'
+                    l_sjpt[(supplier, warehouse, item, lead_time)] = model.addVar(lb=0,
+                                                                             ub=None,
+                                                                             name=variable_name,
+                                                                             vtype="INTEGER")
                     variable_name = f'X[{supplier}][{warehouse}][{item}][{time}]'
                     x_sjpt[(supplier, warehouse, item, time)] = model.addVar(lb=0,
                                                                              ub=None,
@@ -42,7 +55,8 @@ def build_model(data, parameters):
                                                                              name=variable_name,
                                                                              vtype="INTEGER")
 
-    mc.mcprint(text='Constructing Variable Y & Z')
+    mc.mcprint(text='Constructing Variable Yjt: 1 if warehouse j is open in time t else 0\n'
+                    'Constructing Variable Zjt: 1 if warehouse j is operative in time t else 0')
     for warehouse in data['warehouse']:
         for time in range(1, MAX_TIME):
             variable_name = f'Z[{warehouse}][{time}]'
@@ -51,7 +65,7 @@ def build_model(data, parameters):
             variable_name = f'Y[{warehouse}][{time}]'
             y_jt[(warehouse, time)] = model.addVar(lb=0, ub=None, name=variable_name, vtype="BINARY")
 
-    mc.mcprint(text='Constructing Variable W')
+    mc.mcprint(text='Constructing Variable Wjkpt: Quantity transfered of product p from warehouse j to destination k in time t')
     for warehouse in data['warehouse']:
         for destination in data['destination']:
             for item in data['item']:
@@ -62,7 +76,7 @@ def build_model(data, parameters):
                                                                                 name=variable_name,
                                                                                 vtype="INTEGER")
 
-    mc.mcprint(text='Constructing Variable S')
+    mc.mcprint(text='Constructing Variable Sjpt: Quantity of product p stored in warehouse j in time t')
     for warehouse in data['warehouse']:
         for item in data['item']:
             for time in range(1, MAX_TIME):
@@ -103,6 +117,16 @@ def build_model(data, parameters):
                     w_jkpt[warehouse, destination, item, time] for warehouse in data['warehouse']
                     ) >= (parameters['D_kpt'][destination, item, f'{time}'] if (destination, item, f'{time}') in parameters['D_kpt'] else 0))
 
+    # Constraint: Lead time
+    mc.mcprint(text="Constraint: Lead time")
+    for supplier in data['supplier']:
+        for warehouse in data['warehouse']:
+            for item in data['item']:
+                for time in range(1, MAX_TIME):
+                    model.addCons(
+                        x_sjpt[supplier, warehouse, item, time] == l_sjpt[supplier, warehouse, item, (time - 2)]
+                        )
+
     # Constraint: Flujo
     mc.mcprint(text="Constraint: Flujo")  # TODO: include storage
     for warehouse in data['warehouse']:
@@ -112,6 +136,7 @@ def build_model(data, parameters):
                     pyscipopt.quicksum(x_sjpt[supplier, warehouse, item, time] for supplier in data['supplier'])
                     == pyscipopt.quicksum(w_jkpt[warehouse, destination, item, time] for destination in data['destination'])
                     )
+
     # Constraint: Truck capacity
     mc.mcprint(text="Constraint: Truck capacity")
     for supplier in data['supplier']:
@@ -135,7 +160,7 @@ def build_model(data, parameters):
             model.addCons(z_jt[warehouse, time] <= pyscipopt.quicksum(y_jt[warehouse, ttime] for ttime in range(1, time + 1)))  # Can't operate if not open
 
     # Constraint: Can't open twice
-    mc.mcprint(text="Constraint: Open warehouse")
+    mc.mcprint(text="Constraint: Can't open twice")
     for warehouse in data['warehouse']:
         model.addCons(pyscipopt.quicksum(y_jt[warehouse, time] for time in range(1, MAX_TIME)) <= 1)
 
@@ -171,6 +196,11 @@ def build_model(data, parameters):
 def sort_key(text):
     return text.split(':')[-1].replace(' ', '')
 
+
+def sort_key_export(text):
+    return text.replace('[',' ').split(' ')[-1].replace(' ', '')
+
+
 def display_optimal_information():
     model = Model.model
     mc.mcprint(text=model.getStatus(), color=mc.Color.YELLOW)
@@ -188,7 +218,19 @@ def display_optimal_information():
     else:
         mc.mcprint(text="The instance is INFEASIBLE", color=mc.Color.RED)
 
+    X = []
+    for var in list(filter(lambda x: x.name[0] == 'X', model.getVars())):
+        value = int(model.getVal(var))
+        if value != 0:
+            X.append("{}:\t{}".format(value, var))
+    sort = sorted(X, key=sort_key_export)
+    for text in sort:
+        print(text)
+
 
 def reset_model():
     del Model.model
     Model.model = None
+    Model.results = None
+    Model.data = None
+    Model.parameters = None

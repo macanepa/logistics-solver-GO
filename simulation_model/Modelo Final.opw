@@ -26,12 +26,12 @@ CantidadVConfer2Tailandia
 london Cant Kiev
 costotransporteLeg2
 VConfer bodega london
+Dispose 14.NumberOut
 Separate 5.NumberOut Dup
 london Cant Ams
 CantidadVConferTailandia
 CantidadVConferIndia
 total london VConfer
-Variable 213
 total VConfer
 Separate 1.NumberOut Orig
 Dispose 1.NumberOut
@@ -48,6 +48,7 @@ VConfer china
 Dispose 13.NumberOut
 Cant Stockholm desde W Eu
 alm VConfer
+Create 12.NumberOut
 Cant Paris desde W Eu
 Cant Kiev desde W Eu
 london Cant Stockholm

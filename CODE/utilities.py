@@ -117,6 +117,7 @@ def import_data():
         raise Exception("No compatible data has been found. "
                         "Please please insert valid data or change the input data directory")
 
+
 def import_data():
     mc.mcprint(text="Importing from data input directory", color=mc.Color.ORANGE)
     mc.mcprint(text="The current directory is ({})".format(ConfigFiles.DYNAMIC_DIRECTORIES["current_input_data"]),
@@ -173,7 +174,16 @@ def create_parameters():
     # Generating: Demand
     mc.mcprint(text="Generating: Demand")
     D_kpt = {}
-    locations = {'demand_london': 'destination001'}
+    locations = {'demand_amsterdam': 'destination001',
+                 'demand_london': 'destination002',
+                 'demand_paris': 'destination003',
+                 'demand_stockholm': 'destination004',
+                 'demand_kiev': 'destination005',
+                 'demand_moscow': 'destination006',
+                 'demand_rome': 'destination007',
+                 'demand_helsinki': 'destination008',
+                 }
+
     for demand_location in list(filter(lambda x: x in locations, Data.INPUT_DATA)):
         for time in Data.INPUT_DATA[demand_location]:
             for item in Data.INPUT_DATA[demand_location][time]:
@@ -199,6 +209,20 @@ def create_parameters():
         for item in Data.INPUT_DATA['item']:
             SC_sp[(supplier, item)] = Data.INPUT_DATA['supplier'][supplier][item]
 
+    # Generating: Lead time in months Leg 1
+    mc.mcprint(text="Generating: Lead time in months Leg 1")
+    LT1_sj = {}
+    for supplier in Data.INPUT_DATA['supplier']:
+        for warehouse in Data.INPUT_DATA['warehouse']:
+            LT1_sj[(supplier, warehouse)] = int(Data.INPUT_DATA['leg1_delay'][f'{supplier}_{warehouse}']['time_months'])
+
+    # Generating: Lead time in months Leg 2
+    mc.mcprint(text="Generating: Lead time in months Leg 2")
+    LT2_sj = {}
+    for warehouse in Data.INPUT_DATA['warehouse']:
+        for destination in Data.INPUT_DATA['destination']:
+            LT2_sj[(warehouse, destination)] = int(Data.INPUT_DATA['leg2_delay'][f'{warehouse}_{destination}']['time_months'])
+
 
     # Fixed Variables
     # Generating: y_jt
@@ -211,7 +235,10 @@ def create_parameters():
     Data.PARAMETERS = {
         'D_kpt':   D_kpt,
         'Cap_p':   Cap_p,
-        'SC_sp': SC_sp,
+        'SC_sp':   SC_sp,
+        'LT1_sj':  LT1_sj,
+        'LT2_sj':  LT2_sj,
+
 
         # Fixed Variables
         'y_jt': y_jt,
@@ -266,12 +293,16 @@ def import_input_data(select_new_folder=False):
 
 def open_simulation():
     simulation_folder_path = ConfigFiles.FIXED_DIRECTORIES['simulation_model']
-    simulation_file_path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'videoconferencing final.doe')
+    simulation_file_path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'Modelo Final.doe')
     mc.mcprint(text="Creating Simulation",
                color=mc.Color.PINK)
     mc.DirectoryManager.open_file(mc.DirectoryManager([simulation_folder_path]), simulation_file_path)
 
+
 def save_output():
+    if model2.Model.model.getStatus() != 'optimal':
+        return
+
     output_file_name = 'solver_output.xls'
     mc.mcprint(text=f'Attempting to save {output_file_name}',
                color=mc.Color.YELLOW)
@@ -339,3 +370,9 @@ def read_manual(path=None):
     file_path = os.path.join(directory_path, 'README.pdf')
     dir_manager = mc.DirectoryManager([directory_path])
     dir_manager.open_file(file_path)
+
+
+def easter_egg():
+    with open(os.path.join(ConfigFiles.FIXED_DIRECTORIES['working_dir'], 'old_man.txt')) as file:
+        for line in file:
+            print(line.strip())

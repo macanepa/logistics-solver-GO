@@ -1,7 +1,7 @@
 STATISTICS
   Problem name     : Model_Team_8
-  Variables        : 169 (8 binary, 160 integer, 0 implicit integer, 1 continuous)
-  Constraints      : 0 initial, 256 maximal
+  Variables        : 345 (8 binary, 336 integer, 0 implicit integer, 1 continuous)
+  Constraints      : 0 initial, 487 maximal
 OBJECTIVE
   Sense            : minimize
 VARIABLES
@@ -13,134 +13,198 @@ VARIABLES
   [binary] <Y[warehouse002][1]>: obj=0, original bounds=[0,1]
   [binary] <Z[warehouse002][2]>: obj=0, original bounds=[0,1]
   [binary] <Y[warehouse002][2]>: obj=0, original bounds=[0,1]
-  [integer] <X[supplier001][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier002][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier002][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier003][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier003][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier004][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier004][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <Q[supplier001][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
-  [integer] <X[supplier001][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
   [integer] <Q[supplier001][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item002][0]>: obj=0, original bounds=[0,+inf]
   [integer] <X[supplier001][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
   [integer] <Q[supplier001][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse002][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse001][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier002][warehouse002][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier002][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier002][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse001][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier003][warehouse002][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier003][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier003][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse001][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item002][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item003][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item003][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item004][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier004][warehouse002][item004][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier004][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier004][warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item001][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item001][0]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <Q[supplier001][warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <L[supplier001][warehouse001][item002][-1]>: obj=0, original bounds=[0,+inf]
+  [integer] <X[supplier001][warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse001][destination001][item001][1]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse001][destination001][item001][2]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse001][destination001][item002][1]>: obj=0, original bounds=[0,+inf]
@@ -149,6 +213,62 @@ VARIABLES
   [integer] <W[warehouse001][destination001][item003][2]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse001][destination001][item004][1]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse001][destination001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination003][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination004][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination005][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination006][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination007][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse001][destination008][item004][2]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse002][destination001][item001][1]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse002][destination001][item001][2]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse002][destination001][item002][1]>: obj=0, original bounds=[0,+inf]
@@ -157,6 +277,62 @@ VARIABLES
   [integer] <W[warehouse002][destination001][item003][2]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse002][destination001][item004][1]>: obj=0, original bounds=[0,+inf]
   [integer] <W[warehouse002][destination001][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination002][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination003][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination004][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination005][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination006][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination007][item004][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item001][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item001][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item002][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item002][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item003][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item003][2]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item004][1]>: obj=0, original bounds=[0,+inf]
+  [integer] <W[warehouse002][destination008][item004][2]>: obj=0, original bounds=[0,+inf]
   [integer] <S[warehouse001][item001][1]>: obj=0, original bounds=[0,+inf]
   [integer] <S[warehouse001][item001][2]>: obj=0, original bounds=[0,+inf]
   [integer] <S[warehouse001][item002][1]>: obj=0, original bounds=[0,+inf]
@@ -175,7 +351,7 @@ VARIABLES
   [integer] <S[warehouse002][item004][2]>: obj=0, original bounds=[0,+inf]
   [continuous] <objective function>: obj=1, original bounds=[-inf,+inf]
 CONSTRAINTS
-  [linear] <c1>: <objective function>[C] -<W[warehouse001][destination001][item001][1]>[I] -<W[warehouse001][destination001][item001][2]>[I] -<W[warehouse001][destination001][item002][1]>[I] -<W[warehouse001][destination001][item002][2]>[I] -<W[warehouse001][destination001][item003][1]>[I] -<W[warehouse001][destination001][item003][2]>[I] -<W[warehouse001][destination001][item004][1]>[I] -<W[warehouse001][destination001][item004][2]>[I] -<W[warehouse002][destination001][item001][1]>[I] -<W[warehouse002][destination001][item001][2]>[I] -<W[warehouse002][destination001][item002][1]>[I] -<W[warehouse002][destination001][item002][2]>[I] -<W[warehouse002][destination001][item003][1]>[I] -<W[warehouse002][destination001][item003][2]>[I] -<W[warehouse002][destination001][item004][1]>[I] -<W[warehouse002][destination001][item004][2]>[I] -<Q[supplier001][warehouse001][item001][1]>[I] -<Q[supplier001][warehouse001][item001][2]>[I] -<Q[supplier001][warehouse001][item002][1]>[I] -<Q[supplier001][warehouse001][item002][2]>[I] -<Q[supplier001][warehouse001][item003][1]>[I] -<Q[supplier001][warehouse001][item003][2]>[I] -<Q[supplier001][warehouse001][item004][1]>[I] -<Q[supplier001][warehouse001][item004][2]>[I] -<Q[supplier001][warehouse002][item001][1]>[I] -<Q[supplier001][warehouse002][item001][2]>[I] -<Q[supplier001][warehouse002][item002][1]>[I] -<Q[supplier001][warehouse002][item002][2]>[I] -<Q[supplier001][warehouse002][item003][1]>[I] -<Q[supplier001][warehouse002][item003][2]>[I] -<Q[supplier001][warehouse002][item004][1]>[I] -<Q[supplier001][warehouse002][item004][2]>[I] -<Q[supplier002][warehouse001][item001][1]>[I] -<Q[supplier002][warehouse001][item001][2]>[I] -<Q[supplier002][warehouse001][item002][1]>[I] -<Q[supplier002][warehouse001][item002][2]>[I] -<Q[supplier002][warehouse001][item003][1]>[I] -<Q[supplier002][warehouse001][item003][2]>[I] -<Q[supplier002][warehouse001][item004][1]>[I] -<Q[supplier002][warehouse001][item004][2]>[I] -<Q[supplier002][warehouse002][item001][1]>[I] -<Q[supplier002][warehouse002][item001][2]>[I] -<Q[supplier002][warehouse002][item002][1]>[I] -<Q[supplier002][warehouse002][item002][2]>[I] -<Q[supplier002][warehouse002][item003][1]>[I] -<Q[supplier002][warehouse002][item003][2]>[I] -<Q[supplier002][warehouse002][item004][1]>[I] -<Q[supplier002][warehouse002][item004][2]>[I] -<Q[supplier003][warehouse001][item001][1]>[I] -<Q[supplier003][warehouse001][item001][2]>[I] -<Q[supplier003][warehouse001][item002][1]>[I] -<Q[supplier003][warehouse001][item002][2]>[I] -<Q[supplier003][warehouse001][item003][1]>[I] -<Q[supplier003][warehouse001][item003][2]>[I] -<Q[supplier003][warehouse001][item004][1]>[I] -<Q[supplier003][warehouse001][item004][2]>[I] -<Q[supplier003][warehouse002][item001][1]>[I] -<Q[supplier003][warehouse002][item001][2]>[I] -<Q[supplier003][warehouse002][item002][1]>[I] -<Q[supplier003][warehouse002][item002][2]>[I] -<Q[supplier003][warehouse002][item003][1]>[I] -<Q[supplier003][warehouse002][item003][2]>[I] -<Q[supplier003][warehouse002][item004][1]>[I] -<Q[supplier003][warehouse002][item004][2]>[I] -<Q[supplier004][warehouse001][item001][1]>[I] -<Q[supplier004][warehouse001][item001][2]>[I] -<Q[supplier004][warehouse001][item002][1]>[I] -<Q[supplier004][warehouse001][item002][2]>[I] -<Q[supplier004][warehouse001][item003][1]>[I] -<Q[supplier004][warehouse001][item003][2]>[I] -<Q[supplier004][warehouse001][item004][1]>[I] -<Q[supplier004][warehouse001][item004][2]>[I] -<Q[supplier004][warehouse002][item001][1]>[I] -<Q[supplier004][warehouse002][item001][2]>[I] -<Q[supplier004][warehouse002][item002][1]>[I] -<Q[supplier004][warehouse002][item002][2]>[I] -<Q[supplier004][warehouse002][item003][1]>[I] -<Q[supplier004][warehouse002][item003][2]>[I] -<Q[supplier004][warehouse002][item004][1]>[I] -<Q[supplier004][warehouse002][item004][2]>[I] == 0;
+  [linear] <c1>: <objective function>[C] -<W[warehouse001][destination001][item001][1]>[I] -<W[warehouse001][destination001][item001][2]>[I] -<W[warehouse001][destination001][item002][1]>[I] -<W[warehouse001][destination001][item002][2]>[I] -<W[warehouse001][destination001][item003][1]>[I] -<W[warehouse001][destination001][item003][2]>[I] -<W[warehouse001][destination001][item004][1]>[I] -<W[warehouse001][destination001][item004][2]>[I] -<W[warehouse001][destination002][item001][1]>[I] -<W[warehouse001][destination002][item001][2]>[I] -<W[warehouse001][destination002][item002][1]>[I] -<W[warehouse001][destination002][item002][2]>[I] -<W[warehouse001][destination002][item003][1]>[I] -<W[warehouse001][destination002][item003][2]>[I] -<W[warehouse001][destination002][item004][1]>[I] -<W[warehouse001][destination002][item004][2]>[I] -<W[warehouse001][destination003][item001][1]>[I] -<W[warehouse001][destination003][item001][2]>[I] -<W[warehouse001][destination003][item002][1]>[I] -<W[warehouse001][destination003][item002][2]>[I] -<W[warehouse001][destination003][item003][1]>[I] -<W[warehouse001][destination003][item003][2]>[I] -<W[warehouse001][destination003][item004][1]>[I] -<W[warehouse001][destination003][item004][2]>[I] -<W[warehouse001][destination004][item001][1]>[I] -<W[warehouse001][destination004][item001][2]>[I] -<W[warehouse001][destination004][item002][1]>[I] -<W[warehouse001][destination004][item002][2]>[I] -<W[warehouse001][destination004][item003][1]>[I] -<W[warehouse001][destination004][item003][2]>[I] -<W[warehouse001][destination004][item004][1]>[I] -<W[warehouse001][destination004][item004][2]>[I] -<W[warehouse001][destination005][item001][1]>[I] -<W[warehouse001][destination005][item001][2]>[I] -<W[warehouse001][destination005][item002][1]>[I] -<W[warehouse001][destination005][item002][2]>[I] -<W[warehouse001][destination005][item003][1]>[I] -<W[warehouse001][destination005][item003][2]>[I] -<W[warehouse001][destination005][item004][1]>[I] -<W[warehouse001][destination005][item004][2]>[I] -<W[warehouse001][destination006][item001][1]>[I] -<W[warehouse001][destination006][item001][2]>[I] -<W[warehouse001][destination006][item002][1]>[I] -<W[warehouse001][destination006][item002][2]>[I] -<W[warehouse001][destination006][item003][1]>[I] -<W[warehouse001][destination006][item003][2]>[I] -<W[warehouse001][destination006][item004][1]>[I] -<W[warehouse001][destination006][item004][2]>[I] -<W[warehouse001][destination007][item001][1]>[I] -<W[warehouse001][destination007][item001][2]>[I] -<W[warehouse001][destination007][item002][1]>[I] -<W[warehouse001][destination007][item002][2]>[I] -<W[warehouse001][destination007][item003][1]>[I] -<W[warehouse001][destination007][item003][2]>[I] -<W[warehouse001][destination007][item004][1]>[I] -<W[warehouse001][destination007][item004][2]>[I] -<W[warehouse001][destination008][item001][1]>[I] -<W[warehouse001][destination008][item001][2]>[I] -<W[warehouse001][destination008][item002][1]>[I] -<W[warehouse001][destination008][item002][2]>[I] -<W[warehouse001][destination008][item003][1]>[I] -<W[warehouse001][destination008][item003][2]>[I] -<W[warehouse001][destination008][item004][1]>[I] -<W[warehouse001][destination008][item004][2]>[I] -<W[warehouse002][destination001][item001][1]>[I] -<W[warehouse002][destination001][item001][2]>[I] -<W[warehouse002][destination001][item002][1]>[I] -<W[warehouse002][destination001][item002][2]>[I] -<W[warehouse002][destination001][item003][1]>[I] -<W[warehouse002][destination001][item003][2]>[I] -<W[warehouse002][destination001][item004][1]>[I] -<W[warehouse002][destination001][item004][2]>[I] -<W[warehouse002][destination002][item001][1]>[I] -<W[warehouse002][destination002][item001][2]>[I] -<W[warehouse002][destination002][item002][1]>[I] -<W[warehouse002][destination002][item002][2]>[I] -<W[warehouse002][destination002][item003][1]>[I] -<W[warehouse002][destination002][item003][2]>[I] -<W[warehouse002][destination002][item004][1]>[I] -<W[warehouse002][destination002][item004][2]>[I] -<W[warehouse002][destination003][item001][1]>[I] -<W[warehouse002][destination003][item001][2]>[I] -<W[warehouse002][destination003][item002][1]>[I] -<W[warehouse002][destination003][item002][2]>[I] -<W[warehouse002][destination003][item003][1]>[I] -<W[warehouse002][destination003][item003][2]>[I] -<W[warehouse002][destination003][item004][1]>[I] -<W[warehouse002][destination003][item004][2]>[I] -<W[warehouse002][destination004][item001][1]>[I] -<W[warehouse002][destination004][item001][2]>[I] -<W[warehouse002][destination004][item002][1]>[I] -<W[warehouse002][destination004][item002][2]>[I] -<W[warehouse002][destination004][item003][1]>[I] -<W[warehouse002][destination004][item003][2]>[I] -<W[warehouse002][destination004][item004][1]>[I] -<W[warehouse002][destination004][item004][2]>[I] -<W[warehouse002][destination005][item001][1]>[I] -<W[warehouse002][destination005][item001][2]>[I] -<W[warehouse002][destination005][item002][1]>[I] -<W[warehouse002][destination005][item002][2]>[I] -<W[warehouse002][destination005][item003][1]>[I] -<W[warehouse002][destination005][item003][2]>[I] -<W[warehouse002][destination005][item004][1]>[I] -<W[warehouse002][destination005][item004][2]>[I] -<W[warehouse002][destination006][item001][1]>[I] -<W[warehouse002][destination006][item001][2]>[I] -<W[warehouse002][destination006][item002][1]>[I] -<W[warehouse002][destination006][item002][2]>[I] -<W[warehouse002][destination006][item003][1]>[I] -<W[warehouse002][destination006][item003][2]>[I] -<W[warehouse002][destination006][item004][1]>[I] -<W[warehouse002][destination006][item004][2]>[I] -<W[warehouse002][destination007][item001][1]>[I] -<W[warehouse002][destination007][item001][2]>[I] -<W[warehouse002][destination007][item002][1]>[I] -<W[warehouse002][destination007][item002][2]>[I] -<W[warehouse002][destination007][item003][1]>[I] -<W[warehouse002][destination007][item003][2]>[I] -<W[warehouse002][destination007][item004][1]>[I] -<W[warehouse002][destination007][item004][2]>[I] -<W[warehouse002][destination008][item001][1]>[I] -<W[warehouse002][destination008][item001][2]>[I] -<W[warehouse002][destination008][item002][1]>[I] -<W[warehouse002][destination008][item002][2]>[I] -<W[warehouse002][destination008][item003][1]>[I] -<W[warehouse002][destination008][item003][2]>[I] -<W[warehouse002][destination008][item004][1]>[I] -<W[warehouse002][destination008][item004][2]>[I] -<Q[supplier001][warehouse001][item001][1]>[I] -<Q[supplier001][warehouse001][item001][2]>[I] -<Q[supplier001][warehouse001][item002][1]>[I] -<Q[supplier001][warehouse001][item002][2]>[I] -<Q[supplier001][warehouse001][item003][1]>[I] -<Q[supplier001][warehouse001][item003][2]>[I] -<Q[supplier001][warehouse001][item004][1]>[I] -<Q[supplier001][warehouse001][item004][2]>[I] -<Q[supplier001][warehouse002][item001][1]>[I] -<Q[supplier001][warehouse002][item001][2]>[I] -<Q[supplier001][warehouse002][item002][1]>[I] -<Q[supplier001][warehouse002][item002][2]>[I] -<Q[supplier001][warehouse002][item003][1]>[I] -<Q[supplier001][warehouse002][item003][2]>[I] -<Q[supplier001][warehouse002][item004][1]>[I] -<Q[supplier001][warehouse002][item004][2]>[I] -<Q[supplier002][warehouse001][item001][1]>[I] -<Q[supplier002][warehouse001][item001][2]>[I] -<Q[supplier002][warehouse001][item002][1]>[I] -<Q[supplier002][warehouse001][item002][2]>[I] -<Q[supplier002][warehouse001][item003][1]>[I] -<Q[supplier002][warehouse001][item003][2]>[I] -<Q[supplier002][warehouse001][item004][1]>[I] -<Q[supplier002][warehouse001][item004][2]>[I] -<Q[supplier002][warehouse002][item001][1]>[I] -<Q[supplier002][warehouse002][item001][2]>[I] -<Q[supplier002][warehouse002][item002][1]>[I] -<Q[supplier002][warehouse002][item002][2]>[I] -<Q[supplier002][warehouse002][item003][1]>[I] -<Q[supplier002][warehouse002][item003][2]>[I] -<Q[supplier002][warehouse002][item004][1]>[I] -<Q[supplier002][warehouse002][item004][2]>[I] -<Q[supplier003][warehouse001][item001][1]>[I] -<Q[supplier003][warehouse001][item001][2]>[I] -<Q[supplier003][warehouse001][item002][1]>[I] -<Q[supplier003][warehouse001][item002][2]>[I] -<Q[supplier003][warehouse001][item003][1]>[I] -<Q[supplier003][warehouse001][item003][2]>[I] -<Q[supplier003][warehouse001][item004][1]>[I] -<Q[supplier003][warehouse001][item004][2]>[I] -<Q[supplier003][warehouse002][item001][1]>[I] -<Q[supplier003][warehouse002][item001][2]>[I] -<Q[supplier003][warehouse002][item002][1]>[I] -<Q[supplier003][warehouse002][item002][2]>[I] -<Q[supplier003][warehouse002][item003][1]>[I] -<Q[supplier003][warehouse002][item003][2]>[I] -<Q[supplier003][warehouse002][item004][1]>[I] -<Q[supplier003][warehouse002][item004][2]>[I] -<Q[supplier004][warehouse001][item001][1]>[I] -<Q[supplier004][warehouse001][item001][2]>[I] -<Q[supplier004][warehouse001][item002][1]>[I] -<Q[supplier004][warehouse001][item002][2]>[I] -<Q[supplier004][warehouse001][item003][1]>[I] -<Q[supplier004][warehouse001][item003][2]>[I] -<Q[supplier004][warehouse001][item004][1]>[I] -<Q[supplier004][warehouse001][item004][2]>[I] -<Q[supplier004][warehouse002][item001][1]>[I] -<Q[supplier004][warehouse002][item001][2]>[I] -<Q[supplier004][warehouse002][item002][1]>[I] -<Q[supplier004][warehouse002][item002][2]>[I] -<Q[supplier004][warehouse002][item003][1]>[I] -<Q[supplier004][warehouse002][item003][2]>[I] -<Q[supplier004][warehouse002][item004][1]>[I] -<Q[supplier004][warehouse002][item004][2]>[I] == 0;
   [linear] <c2>: <W[warehouse001][destination001][item001][1]>[I] +<W[warehouse002][destination001][item001][1]>[I] >= 1000;
   [linear] <c3>: <W[warehouse001][destination001][item001][2]>[I] +<W[warehouse002][destination001][item001][2]>[I] >= 501;
   [linear] <c4>: <W[warehouse001][destination001][item002][1]>[I] +<W[warehouse002][destination001][item002][1]>[I] >= 2200;
@@ -184,251 +360,482 @@ CONSTRAINTS
   [linear] <c7>: <W[warehouse001][destination001][item003][2]>[I] +<W[warehouse002][destination001][item003][2]>[I] >= 664;
   [linear] <c8>: <W[warehouse001][destination001][item004][1]>[I] +<W[warehouse002][destination001][item004][1]>[I] >= 400;
   [linear] <c9>: <W[warehouse001][destination001][item004][2]>[I] +<W[warehouse002][destination001][item004][2]>[I] >= 365;
-  [linear] <c10>: <X[supplier001][warehouse001][item001][1]>[I] +<X[supplier002][warehouse001][item001][1]>[I] +<X[supplier003][warehouse001][item001][1]>[I] +<X[supplier004][warehouse001][item001][1]>[I] -<W[warehouse001][destination001][item001][1]>[I] == 0;
-  [linear] <c11>: <X[supplier001][warehouse001][item001][2]>[I] +<X[supplier002][warehouse001][item001][2]>[I] +<X[supplier003][warehouse001][item001][2]>[I] +<X[supplier004][warehouse001][item001][2]>[I] -<W[warehouse001][destination001][item001][2]>[I] == 0;
-  [linear] <c12>: <X[supplier001][warehouse001][item002][1]>[I] +<X[supplier002][warehouse001][item002][1]>[I] +<X[supplier003][warehouse001][item002][1]>[I] +<X[supplier004][warehouse001][item002][1]>[I] -<W[warehouse001][destination001][item002][1]>[I] == 0;
-  [linear] <c13>: <X[supplier001][warehouse001][item002][2]>[I] +<X[supplier002][warehouse001][item002][2]>[I] +<X[supplier003][warehouse001][item002][2]>[I] +<X[supplier004][warehouse001][item002][2]>[I] -<W[warehouse001][destination001][item002][2]>[I] == 0;
-  [linear] <c14>: <X[supplier001][warehouse001][item003][1]>[I] +<X[supplier002][warehouse001][item003][1]>[I] +<X[supplier003][warehouse001][item003][1]>[I] +<X[supplier004][warehouse001][item003][1]>[I] -<W[warehouse001][destination001][item003][1]>[I] == 0;
-  [linear] <c15>: <X[supplier001][warehouse001][item003][2]>[I] +<X[supplier002][warehouse001][item003][2]>[I] +<X[supplier003][warehouse001][item003][2]>[I] +<X[supplier004][warehouse001][item003][2]>[I] -<W[warehouse001][destination001][item003][2]>[I] == 0;
-  [linear] <c16>: <X[supplier001][warehouse001][item004][1]>[I] +<X[supplier002][warehouse001][item004][1]>[I] +<X[supplier003][warehouse001][item004][1]>[I] +<X[supplier004][warehouse001][item004][1]>[I] -<W[warehouse001][destination001][item004][1]>[I] == 0;
-  [linear] <c17>: <X[supplier001][warehouse001][item004][2]>[I] +<X[supplier002][warehouse001][item004][2]>[I] +<X[supplier003][warehouse001][item004][2]>[I] +<X[supplier004][warehouse001][item004][2]>[I] -<W[warehouse001][destination001][item004][2]>[I] == 0;
-  [linear] <c18>: <X[supplier001][warehouse002][item001][1]>[I] +<X[supplier002][warehouse002][item001][1]>[I] +<X[supplier003][warehouse002][item001][1]>[I] +<X[supplier004][warehouse002][item001][1]>[I] -<W[warehouse002][destination001][item001][1]>[I] == 0;
-  [linear] <c19>: <X[supplier001][warehouse002][item001][2]>[I] +<X[supplier002][warehouse002][item001][2]>[I] +<X[supplier003][warehouse002][item001][2]>[I] +<X[supplier004][warehouse002][item001][2]>[I] -<W[warehouse002][destination001][item001][2]>[I] == 0;
-  [linear] <c20>: <X[supplier001][warehouse002][item002][1]>[I] +<X[supplier002][warehouse002][item002][1]>[I] +<X[supplier003][warehouse002][item002][1]>[I] +<X[supplier004][warehouse002][item002][1]>[I] -<W[warehouse002][destination001][item002][1]>[I] == 0;
-  [linear] <c21>: <X[supplier001][warehouse002][item002][2]>[I] +<X[supplier002][warehouse002][item002][2]>[I] +<X[supplier003][warehouse002][item002][2]>[I] +<X[supplier004][warehouse002][item002][2]>[I] -<W[warehouse002][destination001][item002][2]>[I] == 0;
-  [linear] <c22>: <X[supplier001][warehouse002][item003][1]>[I] +<X[supplier002][warehouse002][item003][1]>[I] +<X[supplier003][warehouse002][item003][1]>[I] +<X[supplier004][warehouse002][item003][1]>[I] -<W[warehouse002][destination001][item003][1]>[I] == 0;
-  [linear] <c23>: <X[supplier001][warehouse002][item003][2]>[I] +<X[supplier002][warehouse002][item003][2]>[I] +<X[supplier003][warehouse002][item003][2]>[I] +<X[supplier004][warehouse002][item003][2]>[I] -<W[warehouse002][destination001][item003][2]>[I] == 0;
-  [linear] <c24>: <X[supplier001][warehouse002][item004][1]>[I] +<X[supplier002][warehouse002][item004][1]>[I] +<X[supplier003][warehouse002][item004][1]>[I] +<X[supplier004][warehouse002][item004][1]>[I] -<W[warehouse002][destination001][item004][1]>[I] == 0;
-  [linear] <c25>: <X[supplier001][warehouse002][item004][2]>[I] +<X[supplier002][warehouse002][item004][2]>[I] +<X[supplier003][warehouse002][item004][2]>[I] +<X[supplier004][warehouse002][item004][2]>[I] -<W[warehouse002][destination001][item004][2]>[I] == 0;
-  [linear] <c26>: <X[supplier001][warehouse001][item001][1]>[I] -200<Q[supplier001][warehouse001][item001][1]>[I] <= 0;
-  [linear] <c27>: <X[supplier001][warehouse001][item001][2]>[I] -200<Q[supplier001][warehouse001][item001][2]>[I] <= 0;
-  [linear] <c28>: <X[supplier001][warehouse001][item002][1]>[I] -150<Q[supplier001][warehouse001][item002][1]>[I] <= 0;
-  [linear] <c29>: <X[supplier001][warehouse001][item002][2]>[I] -150<Q[supplier001][warehouse001][item002][2]>[I] <= 0;
-  [linear] <c30>: <X[supplier001][warehouse001][item003][1]>[I] -100<Q[supplier001][warehouse001][item003][1]>[I] <= 0;
-  [linear] <c31>: <X[supplier001][warehouse001][item003][2]>[I] -100<Q[supplier001][warehouse001][item003][2]>[I] <= 0;
-  [linear] <c32>: <X[supplier001][warehouse001][item004][1]>[I] -300<Q[supplier001][warehouse001][item004][1]>[I] <= 0;
-  [linear] <c33>: <X[supplier001][warehouse001][item004][2]>[I] -300<Q[supplier001][warehouse001][item004][2]>[I] <= 0;
-  [linear] <c34>: <X[supplier001][warehouse002][item001][1]>[I] -200<Q[supplier001][warehouse002][item001][1]>[I] <= 0;
-  [linear] <c35>: <X[supplier001][warehouse002][item001][2]>[I] -200<Q[supplier001][warehouse002][item001][2]>[I] <= 0;
-  [linear] <c36>: <X[supplier001][warehouse002][item002][1]>[I] -150<Q[supplier001][warehouse002][item002][1]>[I] <= 0;
-  [linear] <c37>: <X[supplier001][warehouse002][item002][2]>[I] -150<Q[supplier001][warehouse002][item002][2]>[I] <= 0;
-  [linear] <c38>: <X[supplier001][warehouse002][item003][1]>[I] -100<Q[supplier001][warehouse002][item003][1]>[I] <= 0;
-  [linear] <c39>: <X[supplier001][warehouse002][item003][2]>[I] -100<Q[supplier001][warehouse002][item003][2]>[I] <= 0;
-  [linear] <c40>: <X[supplier001][warehouse002][item004][1]>[I] -300<Q[supplier001][warehouse002][item004][1]>[I] <= 0;
-  [linear] <c41>: <X[supplier001][warehouse002][item004][2]>[I] -300<Q[supplier001][warehouse002][item004][2]>[I] <= 0;
-  [linear] <c42>: <X[supplier002][warehouse001][item001][1]>[I] -200<Q[supplier002][warehouse001][item001][1]>[I] <= 0;
-  [linear] <c43>: <X[supplier002][warehouse001][item001][2]>[I] -200<Q[supplier002][warehouse001][item001][2]>[I] <= 0;
-  [linear] <c44>: <X[supplier002][warehouse001][item002][1]>[I] -150<Q[supplier002][warehouse001][item002][1]>[I] <= 0;
-  [linear] <c45>: <X[supplier002][warehouse001][item002][2]>[I] -150<Q[supplier002][warehouse001][item002][2]>[I] <= 0;
-  [linear] <c46>: <X[supplier002][warehouse001][item003][1]>[I] -100<Q[supplier002][warehouse001][item003][1]>[I] <= 0;
-  [linear] <c47>: <X[supplier002][warehouse001][item003][2]>[I] -100<Q[supplier002][warehouse001][item003][2]>[I] <= 0;
-  [linear] <c48>: <X[supplier002][warehouse001][item004][1]>[I] -300<Q[supplier002][warehouse001][item004][1]>[I] <= 0;
-  [linear] <c49>: <X[supplier002][warehouse001][item004][2]>[I] -300<Q[supplier002][warehouse001][item004][2]>[I] <= 0;
-  [linear] <c50>: <X[supplier002][warehouse002][item001][1]>[I] -200<Q[supplier002][warehouse002][item001][1]>[I] <= 0;
-  [linear] <c51>: <X[supplier002][warehouse002][item001][2]>[I] -200<Q[supplier002][warehouse002][item001][2]>[I] <= 0;
-  [linear] <c52>: <X[supplier002][warehouse002][item002][1]>[I] -150<Q[supplier002][warehouse002][item002][1]>[I] <= 0;
-  [linear] <c53>: <X[supplier002][warehouse002][item002][2]>[I] -150<Q[supplier002][warehouse002][item002][2]>[I] <= 0;
-  [linear] <c54>: <X[supplier002][warehouse002][item003][1]>[I] -100<Q[supplier002][warehouse002][item003][1]>[I] <= 0;
-  [linear] <c55>: <X[supplier002][warehouse002][item003][2]>[I] -100<Q[supplier002][warehouse002][item003][2]>[I] <= 0;
-  [linear] <c56>: <X[supplier002][warehouse002][item004][1]>[I] -300<Q[supplier002][warehouse002][item004][1]>[I] <= 0;
-  [linear] <c57>: <X[supplier002][warehouse002][item004][2]>[I] -300<Q[supplier002][warehouse002][item004][2]>[I] <= 0;
-  [linear] <c58>: <X[supplier003][warehouse001][item001][1]>[I] -200<Q[supplier003][warehouse001][item001][1]>[I] <= 0;
-  [linear] <c59>: <X[supplier003][warehouse001][item001][2]>[I] -200<Q[supplier003][warehouse001][item001][2]>[I] <= 0;
-  [linear] <c60>: <X[supplier003][warehouse001][item002][1]>[I] -150<Q[supplier003][warehouse001][item002][1]>[I] <= 0;
-  [linear] <c61>: <X[supplier003][warehouse001][item002][2]>[I] -150<Q[supplier003][warehouse001][item002][2]>[I] <= 0;
-  [linear] <c62>: <X[supplier003][warehouse001][item003][1]>[I] -100<Q[supplier003][warehouse001][item003][1]>[I] <= 0;
-  [linear] <c63>: <X[supplier003][warehouse001][item003][2]>[I] -100<Q[supplier003][warehouse001][item003][2]>[I] <= 0;
-  [linear] <c64>: <X[supplier003][warehouse001][item004][1]>[I] -300<Q[supplier003][warehouse001][item004][1]>[I] <= 0;
-  [linear] <c65>: <X[supplier003][warehouse001][item004][2]>[I] -300<Q[supplier003][warehouse001][item004][2]>[I] <= 0;
-  [linear] <c66>: <X[supplier003][warehouse002][item001][1]>[I] -200<Q[supplier003][warehouse002][item001][1]>[I] <= 0;
-  [linear] <c67>: <X[supplier003][warehouse002][item001][2]>[I] -200<Q[supplier003][warehouse002][item001][2]>[I] <= 0;
-  [linear] <c68>: <X[supplier003][warehouse002][item002][1]>[I] -150<Q[supplier003][warehouse002][item002][1]>[I] <= 0;
-  [linear] <c69>: <X[supplier003][warehouse002][item002][2]>[I] -150<Q[supplier003][warehouse002][item002][2]>[I] <= 0;
-  [linear] <c70>: <X[supplier003][warehouse002][item003][1]>[I] -100<Q[supplier003][warehouse002][item003][1]>[I] <= 0;
-  [linear] <c71>: <X[supplier003][warehouse002][item003][2]>[I] -100<Q[supplier003][warehouse002][item003][2]>[I] <= 0;
-  [linear] <c72>: <X[supplier003][warehouse002][item004][1]>[I] -300<Q[supplier003][warehouse002][item004][1]>[I] <= 0;
-  [linear] <c73>: <X[supplier003][warehouse002][item004][2]>[I] -300<Q[supplier003][warehouse002][item004][2]>[I] <= 0;
-  [linear] <c74>: <X[supplier004][warehouse001][item001][1]>[I] -200<Q[supplier004][warehouse001][item001][1]>[I] <= 0;
-  [linear] <c75>: <X[supplier004][warehouse001][item001][2]>[I] -200<Q[supplier004][warehouse001][item001][2]>[I] <= 0;
-  [linear] <c76>: <X[supplier004][warehouse001][item002][1]>[I] -150<Q[supplier004][warehouse001][item002][1]>[I] <= 0;
-  [linear] <c77>: <X[supplier004][warehouse001][item002][2]>[I] -150<Q[supplier004][warehouse001][item002][2]>[I] <= 0;
-  [linear] <c78>: <X[supplier004][warehouse001][item003][1]>[I] -100<Q[supplier004][warehouse001][item003][1]>[I] <= 0;
-  [linear] <c79>: <X[supplier004][warehouse001][item003][2]>[I] -100<Q[supplier004][warehouse001][item003][2]>[I] <= 0;
-  [linear] <c80>: <X[supplier004][warehouse001][item004][1]>[I] -300<Q[supplier004][warehouse001][item004][1]>[I] <= 0;
-  [linear] <c81>: <X[supplier004][warehouse001][item004][2]>[I] -300<Q[supplier004][warehouse001][item004][2]>[I] <= 0;
-  [linear] <c82>: <X[supplier004][warehouse002][item001][1]>[I] -200<Q[supplier004][warehouse002][item001][1]>[I] <= 0;
-  [linear] <c83>: <X[supplier004][warehouse002][item001][2]>[I] -200<Q[supplier004][warehouse002][item001][2]>[I] <= 0;
-  [linear] <c84>: <X[supplier004][warehouse002][item002][1]>[I] -150<Q[supplier004][warehouse002][item002][1]>[I] <= 0;
-  [linear] <c85>: <X[supplier004][warehouse002][item002][2]>[I] -150<Q[supplier004][warehouse002][item002][2]>[I] <= 0;
-  [linear] <c86>: <X[supplier004][warehouse002][item003][1]>[I] -100<Q[supplier004][warehouse002][item003][1]>[I] <= 0;
-  [linear] <c87>: <X[supplier004][warehouse002][item003][2]>[I] -100<Q[supplier004][warehouse002][item003][2]>[I] <= 0;
-  [linear] <c88>: <X[supplier004][warehouse002][item004][1]>[I] -300<Q[supplier004][warehouse002][item004][1]>[I] <= 0;
-  [linear] <c89>: <X[supplier004][warehouse002][item004][2]>[I] -300<Q[supplier004][warehouse002][item004][2]>[I] <= 0;
-  [linear] <c90>: <X[supplier001][warehouse001][item001][1]>[I] <= 4000;
-  [linear] <c91>: <X[supplier001][warehouse001][item001][2]>[I] <= 4000;
-  [linear] <c92>: <X[supplier001][warehouse001][item002][1]>[I] <= 4000;
-  [linear] <c93>: <X[supplier001][warehouse001][item002][2]>[I] <= 4000;
-  [linear] <c94>: <X[supplier001][warehouse001][item003][1]>[I] <= 6000;
-  [linear] <c95>: <X[supplier001][warehouse001][item003][2]>[I] <= 6000;
-  [linear] <c96>: <X[supplier001][warehouse001][item004][1]>[I] <= 2000;
-  [linear] <c97>: <X[supplier001][warehouse001][item004][2]>[I] <= 2000;
-  [linear] <c98>: <X[supplier001][warehouse002][item001][1]>[I] <= 4000;
-  [linear] <c99>: <X[supplier001][warehouse002][item001][2]>[I] <= 4000;
-  [linear] <c100>: <X[supplier001][warehouse002][item002][1]>[I] <= 4000;
-  [linear] <c101>: <X[supplier001][warehouse002][item002][2]>[I] <= 4000;
-  [linear] <c102>: <X[supplier001][warehouse002][item003][1]>[I] <= 6000;
-  [linear] <c103>: <X[supplier001][warehouse002][item003][2]>[I] <= 6000;
-  [linear] <c104>: <X[supplier001][warehouse002][item004][1]>[I] <= 2000;
-  [linear] <c105>: <X[supplier001][warehouse002][item004][2]>[I] <= 2000;
-  [linear] <c106>: <X[supplier002][warehouse001][item001][1]>[I] <= 4000;
-  [linear] <c107>: <X[supplier002][warehouse001][item001][2]>[I] <= 4000;
-  [linear] <c108>: <X[supplier002][warehouse001][item002][1]>[I] <= 2000;
-  [linear] <c109>: <X[supplier002][warehouse001][item002][2]>[I] <= 2000;
-  [linear] <c110>: <X[supplier002][warehouse001][item003][1]>[I] <= 0;
-  [linear] <c111>: <X[supplier002][warehouse001][item003][2]>[I] <= 0;
-  [linear] <c112>: <X[supplier002][warehouse001][item004][1]>[I] <= 4000;
-  [linear] <c113>: <X[supplier002][warehouse001][item004][2]>[I] <= 4000;
-  [linear] <c114>: <X[supplier002][warehouse002][item001][1]>[I] <= 4000;
-  [linear] <c115>: <X[supplier002][warehouse002][item001][2]>[I] <= 4000;
-  [linear] <c116>: <X[supplier002][warehouse002][item002][1]>[I] <= 2000;
-  [linear] <c117>: <X[supplier002][warehouse002][item002][2]>[I] <= 2000;
-  [linear] <c118>: <X[supplier002][warehouse002][item003][1]>[I] <= 0;
-  [linear] <c119>: <X[supplier002][warehouse002][item003][2]>[I] <= 0;
-  [linear] <c120>: <X[supplier002][warehouse002][item004][1]>[I] <= 4000;
-  [linear] <c121>: <X[supplier002][warehouse002][item004][2]>[I] <= 4000;
-  [linear] <c122>: <X[supplier003][warehouse001][item001][1]>[I] <= 3000;
-  [linear] <c123>: <X[supplier003][warehouse001][item001][2]>[I] <= 3000;
-  [linear] <c124>: <X[supplier003][warehouse001][item002][1]>[I] <= 4000;
-  [linear] <c125>: <X[supplier003][warehouse001][item002][2]>[I] <= 4000;
-  [linear] <c126>: <X[supplier003][warehouse001][item003][1]>[I] <= 4000;
-  [linear] <c127>: <X[supplier003][warehouse001][item003][2]>[I] <= 4000;
-  [linear] <c128>: <X[supplier003][warehouse001][item004][1]>[I] <= 4000;
-  [linear] <c129>: <X[supplier003][warehouse001][item004][2]>[I] <= 4000;
-  [linear] <c130>: <X[supplier003][warehouse002][item001][1]>[I] <= 3000;
-  [linear] <c131>: <X[supplier003][warehouse002][item001][2]>[I] <= 3000;
-  [linear] <c132>: <X[supplier003][warehouse002][item002][1]>[I] <= 4000;
-  [linear] <c133>: <X[supplier003][warehouse002][item002][2]>[I] <= 4000;
-  [linear] <c134>: <X[supplier003][warehouse002][item003][1]>[I] <= 4000;
-  [linear] <c135>: <X[supplier003][warehouse002][item003][2]>[I] <= 4000;
-  [linear] <c136>: <X[supplier003][warehouse002][item004][1]>[I] <= 4000;
-  [linear] <c137>: <X[supplier003][warehouse002][item004][2]>[I] <= 4000;
-  [linear] <c138>: <X[supplier004][warehouse001][item001][1]>[I] <= 3000;
-  [linear] <c139>: <X[supplier004][warehouse001][item001][2]>[I] <= 3000;
-  [linear] <c140>: <X[supplier004][warehouse001][item002][1]>[I] <= 3000;
-  [linear] <c141>: <X[supplier004][warehouse001][item002][2]>[I] <= 3000;
-  [linear] <c142>: <X[supplier004][warehouse001][item003][1]>[I] <= 2000;
-  [linear] <c143>: <X[supplier004][warehouse001][item003][2]>[I] <= 2000;
-  [linear] <c144>: <X[supplier004][warehouse001][item004][1]>[I] <= 2000;
-  [linear] <c145>: <X[supplier004][warehouse001][item004][2]>[I] <= 2000;
-  [linear] <c146>: <X[supplier004][warehouse002][item001][1]>[I] <= 3000;
-  [linear] <c147>: <X[supplier004][warehouse002][item001][2]>[I] <= 3000;
-  [linear] <c148>: <X[supplier004][warehouse002][item002][1]>[I] <= 3000;
-  [linear] <c149>: <X[supplier004][warehouse002][item002][2]>[I] <= 3000;
-  [linear] <c150>: <X[supplier004][warehouse002][item003][1]>[I] <= 2000;
-  [linear] <c151>: <X[supplier004][warehouse002][item003][2]>[I] <= 2000;
-  [linear] <c152>: <X[supplier004][warehouse002][item004][1]>[I] <= 2000;
-  [linear] <c153>: <X[supplier004][warehouse002][item004][2]>[I] <= 2000;
-  [linear] <c154>: <Z[warehouse001][1]>[B] -<Y[warehouse001][1]>[B] <= 0;
-  [linear] <c155>: <Z[warehouse001][2]>[B] -<Y[warehouse001][1]>[B] -<Y[warehouse001][2]>[B] <= 0;
-  [linear] <c156>: <Z[warehouse002][1]>[B] -<Y[warehouse002][1]>[B] <= 0;
-  [linear] <c157>: <Z[warehouse002][2]>[B] -<Y[warehouse002][1]>[B] -<Y[warehouse002][2]>[B] <= 0;
-  [linear] <c158>: <Y[warehouse001][1]>[B] +<Y[warehouse001][2]>[B] <= 1;
-  [linear] <c159>: <Y[warehouse002][1]>[B] +<Y[warehouse002][2]>[B] <= 1;
-  [linear] <c160>: <X[supplier001][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c161>: <X[supplier001][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c162>: <X[supplier001][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c163>: <X[supplier001][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c164>: <X[supplier001][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c165>: <X[supplier001][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c166>: <X[supplier001][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c167>: <X[supplier001][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c168>: <X[supplier001][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c169>: <X[supplier001][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c170>: <X[supplier001][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c171>: <X[supplier001][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c172>: <X[supplier001][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c173>: <X[supplier001][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c174>: <X[supplier001][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c175>: <X[supplier001][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c176>: <X[supplier002][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c177>: <X[supplier002][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c178>: <X[supplier002][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c179>: <X[supplier002][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c180>: <X[supplier002][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c181>: <X[supplier002][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c182>: <X[supplier002][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c183>: <X[supplier002][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c184>: <X[supplier002][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c185>: <X[supplier002][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c186>: <X[supplier002][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c187>: <X[supplier002][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c188>: <X[supplier002][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c189>: <X[supplier002][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c190>: <X[supplier002][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c191>: <X[supplier002][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c192>: <X[supplier003][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c193>: <X[supplier003][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c194>: <X[supplier003][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c195>: <X[supplier003][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c196>: <X[supplier003][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c197>: <X[supplier003][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c198>: <X[supplier003][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c199>: <X[supplier003][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c200>: <X[supplier003][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c201>: <X[supplier003][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c202>: <X[supplier003][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c203>: <X[supplier003][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c204>: <X[supplier003][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c205>: <X[supplier003][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c206>: <X[supplier003][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c207>: <X[supplier003][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c208>: <X[supplier004][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c209>: <X[supplier004][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c210>: <X[supplier004][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c211>: <X[supplier004][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c212>: <X[supplier004][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c213>: <X[supplier004][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c214>: <X[supplier004][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c215>: <X[supplier004][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c216>: <X[supplier004][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c217>: <X[supplier004][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c218>: <X[supplier004][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c219>: <X[supplier004][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c220>: <X[supplier004][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c221>: <X[supplier004][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c222>: <X[supplier004][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c223>: <X[supplier004][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c224>: <W[warehouse001][destination001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c225>: <W[warehouse001][destination001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c226>: <W[warehouse001][destination001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c227>: <W[warehouse001][destination001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c228>: <W[warehouse001][destination001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c229>: <W[warehouse001][destination001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c230>: <W[warehouse001][destination001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c231>: <W[warehouse001][destination001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c232>: <W[warehouse002][destination001][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c233>: <W[warehouse002][destination001][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c234>: <W[warehouse002][destination001][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c235>: <W[warehouse002][destination001][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c236>: <W[warehouse002][destination001][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c237>: <W[warehouse002][destination001][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c238>: <W[warehouse002][destination001][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c239>: <W[warehouse002][destination001][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c240>: <S[warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c241>: <S[warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c242>: <S[warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c243>: <S[warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c244>: <S[warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c245>: <S[warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c246>: <S[warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
-  [linear] <c247>: <S[warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
-  [linear] <c248>: <S[warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c249>: <S[warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c250>: <S[warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c251>: <S[warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c252>: <S[warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c253>: <S[warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c254>: <S[warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
-  [linear] <c255>: <S[warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
-  [linear] <c256>: <Y[warehouse001][2]>[B] == 1;
+  [linear] <c10>: <W[warehouse001][destination002][item001][1]>[I] +<W[warehouse002][destination002][item001][1]>[I] >= 1000;
+  [linear] <c11>: <W[warehouse001][destination002][item001][2]>[I] +<W[warehouse002][destination002][item001][2]>[I] >= 501;
+  [linear] <c12>: <W[warehouse001][destination002][item002][1]>[I] +<W[warehouse002][destination002][item002][1]>[I] >= 2200;
+  [linear] <c13>: <W[warehouse001][destination002][item002][2]>[I] +<W[warehouse002][destination002][item002][2]>[I] >= 413;
+  [linear] <c14>: <W[warehouse001][destination002][item003][1]>[I] +<W[warehouse002][destination002][item003][1]>[I] >= 324;
+  [linear] <c15>: <W[warehouse001][destination002][item003][2]>[I] +<W[warehouse002][destination002][item003][2]>[I] >= 664;
+  [linear] <c16>: <W[warehouse001][destination002][item004][1]>[I] +<W[warehouse002][destination002][item004][1]>[I] >= 400;
+  [linear] <c17>: <W[warehouse001][destination002][item004][2]>[I] +<W[warehouse002][destination002][item004][2]>[I] >= 365;
+  [linear] <c18>: <W[warehouse001][destination003][item001][1]>[I] +<W[warehouse002][destination003][item001][1]>[I] >= 1000;
+  [linear] <c19>: <W[warehouse001][destination003][item001][2]>[I] +<W[warehouse002][destination003][item001][2]>[I] >= 501;
+  [linear] <c20>: <W[warehouse001][destination003][item002][1]>[I] +<W[warehouse002][destination003][item002][1]>[I] >= 2200;
+  [linear] <c21>: <W[warehouse001][destination003][item002][2]>[I] +<W[warehouse002][destination003][item002][2]>[I] >= 413;
+  [linear] <c22>: <W[warehouse001][destination003][item003][1]>[I] +<W[warehouse002][destination003][item003][1]>[I] >= 324;
+  [linear] <c23>: <W[warehouse001][destination003][item003][2]>[I] +<W[warehouse002][destination003][item003][2]>[I] >= 664;
+  [linear] <c24>: <W[warehouse001][destination003][item004][1]>[I] +<W[warehouse002][destination003][item004][1]>[I] >= 400;
+  [linear] <c25>: <W[warehouse001][destination003][item004][2]>[I] +<W[warehouse002][destination003][item004][2]>[I] >= 365;
+  [linear] <c26>: <W[warehouse001][destination004][item001][1]>[I] +<W[warehouse002][destination004][item001][1]>[I] >= 1000;
+  [linear] <c27>: <W[warehouse001][destination004][item001][2]>[I] +<W[warehouse002][destination004][item001][2]>[I] >= 501;
+  [linear] <c28>: <W[warehouse001][destination004][item002][1]>[I] +<W[warehouse002][destination004][item002][1]>[I] >= 2200;
+  [linear] <c29>: <W[warehouse001][destination004][item002][2]>[I] +<W[warehouse002][destination004][item002][2]>[I] >= 413;
+  [linear] <c30>: <W[warehouse001][destination004][item003][1]>[I] +<W[warehouse002][destination004][item003][1]>[I] >= 324;
+  [linear] <c31>: <W[warehouse001][destination004][item003][2]>[I] +<W[warehouse002][destination004][item003][2]>[I] >= 664;
+  [linear] <c32>: <W[warehouse001][destination004][item004][1]>[I] +<W[warehouse002][destination004][item004][1]>[I] >= 400;
+  [linear] <c33>: <W[warehouse001][destination004][item004][2]>[I] +<W[warehouse002][destination004][item004][2]>[I] >= 365;
+  [linear] <c34>: <W[warehouse001][destination005][item001][1]>[I] +<W[warehouse002][destination005][item001][1]>[I] >= 1000;
+  [linear] <c35>: <W[warehouse001][destination005][item001][2]>[I] +<W[warehouse002][destination005][item001][2]>[I] >= 501;
+  [linear] <c36>: <W[warehouse001][destination005][item002][1]>[I] +<W[warehouse002][destination005][item002][1]>[I] >= 2200;
+  [linear] <c37>: <W[warehouse001][destination005][item002][2]>[I] +<W[warehouse002][destination005][item002][2]>[I] >= 413;
+  [linear] <c38>: <W[warehouse001][destination005][item003][1]>[I] +<W[warehouse002][destination005][item003][1]>[I] >= 324;
+  [linear] <c39>: <W[warehouse001][destination005][item003][2]>[I] +<W[warehouse002][destination005][item003][2]>[I] >= 664;
+  [linear] <c40>: <W[warehouse001][destination005][item004][1]>[I] +<W[warehouse002][destination005][item004][1]>[I] >= 400;
+  [linear] <c41>: <W[warehouse001][destination005][item004][2]>[I] +<W[warehouse002][destination005][item004][2]>[I] >= 365;
+  [linear] <c42>: <W[warehouse001][destination006][item001][1]>[I] +<W[warehouse002][destination006][item001][1]>[I] >= 1000;
+  [linear] <c43>: <W[warehouse001][destination006][item001][2]>[I] +<W[warehouse002][destination006][item001][2]>[I] >= 501;
+  [linear] <c44>: <W[warehouse001][destination006][item002][1]>[I] +<W[warehouse002][destination006][item002][1]>[I] >= 2200;
+  [linear] <c45>: <W[warehouse001][destination006][item002][2]>[I] +<W[warehouse002][destination006][item002][2]>[I] >= 413;
+  [linear] <c46>: <W[warehouse001][destination006][item003][1]>[I] +<W[warehouse002][destination006][item003][1]>[I] >= 324;
+  [linear] <c47>: <W[warehouse001][destination006][item003][2]>[I] +<W[warehouse002][destination006][item003][2]>[I] >= 664;
+  [linear] <c48>: <W[warehouse001][destination006][item004][1]>[I] +<W[warehouse002][destination006][item004][1]>[I] >= 400;
+  [linear] <c49>: <W[warehouse001][destination006][item004][2]>[I] +<W[warehouse002][destination006][item004][2]>[I] >= 365;
+  [linear] <c50>: <W[warehouse001][destination007][item001][1]>[I] +<W[warehouse002][destination007][item001][1]>[I] >= 1000;
+  [linear] <c51>: <W[warehouse001][destination007][item001][2]>[I] +<W[warehouse002][destination007][item001][2]>[I] >= 501;
+  [linear] <c52>: <W[warehouse001][destination007][item002][1]>[I] +<W[warehouse002][destination007][item002][1]>[I] >= 2200;
+  [linear] <c53>: <W[warehouse001][destination007][item002][2]>[I] +<W[warehouse002][destination007][item002][2]>[I] >= 413;
+  [linear] <c54>: <W[warehouse001][destination007][item003][1]>[I] +<W[warehouse002][destination007][item003][1]>[I] >= 324;
+  [linear] <c55>: <W[warehouse001][destination007][item003][2]>[I] +<W[warehouse002][destination007][item003][2]>[I] >= 664;
+  [linear] <c56>: <W[warehouse001][destination007][item004][1]>[I] +<W[warehouse002][destination007][item004][1]>[I] >= 400;
+  [linear] <c57>: <W[warehouse001][destination007][item004][2]>[I] +<W[warehouse002][destination007][item004][2]>[I] >= 365;
+  [linear] <c58>: <W[warehouse001][destination008][item001][1]>[I] +<W[warehouse002][destination008][item001][1]>[I] >= 1000;
+  [linear] <c59>: <W[warehouse001][destination008][item001][2]>[I] +<W[warehouse002][destination008][item001][2]>[I] >= 501;
+  [linear] <c60>: <W[warehouse001][destination008][item002][1]>[I] +<W[warehouse002][destination008][item002][1]>[I] >= 2200;
+  [linear] <c61>: <W[warehouse001][destination008][item002][2]>[I] +<W[warehouse002][destination008][item002][2]>[I] >= 413;
+  [linear] <c62>: <W[warehouse001][destination008][item003][1]>[I] +<W[warehouse002][destination008][item003][1]>[I] >= 324;
+  [linear] <c63>: <W[warehouse001][destination008][item003][2]>[I] +<W[warehouse002][destination008][item003][2]>[I] >= 664;
+  [linear] <c64>: <W[warehouse001][destination008][item004][1]>[I] +<W[warehouse002][destination008][item004][1]>[I] >= 400;
+  [linear] <c65>: <W[warehouse001][destination008][item004][2]>[I] +<W[warehouse002][destination008][item004][2]>[I] >= 365;
+  [linear] <c66>: <X[supplier001][warehouse001][item001][1]>[I] -<L[supplier001][warehouse001][item001][-1]>[I] == 0;
+  [linear] <c67>: <X[supplier001][warehouse001][item001][2]>[I] -<L[supplier001][warehouse001][item001][0]>[I] == 0;
+  [linear] <c68>: <X[supplier001][warehouse001][item002][1]>[I] -<L[supplier001][warehouse001][item002][-1]>[I] == 0;
+  [linear] <c69>: <X[supplier001][warehouse001][item002][2]>[I] -<L[supplier001][warehouse001][item002][0]>[I] == 0;
+  [linear] <c70>: <X[supplier001][warehouse001][item003][1]>[I] -<L[supplier001][warehouse001][item003][-1]>[I] == 0;
+  [linear] <c71>: <X[supplier001][warehouse001][item003][2]>[I] -<L[supplier001][warehouse001][item003][0]>[I] == 0;
+  [linear] <c72>: <X[supplier001][warehouse001][item004][1]>[I] -<L[supplier001][warehouse001][item004][-1]>[I] == 0;
+  [linear] <c73>: <X[supplier001][warehouse001][item004][2]>[I] -<L[supplier001][warehouse001][item004][0]>[I] == 0;
+  [linear] <c74>: <X[supplier001][warehouse002][item001][1]>[I] -<L[supplier001][warehouse002][item001][-1]>[I] == 0;
+  [linear] <c75>: <X[supplier001][warehouse002][item001][2]>[I] -<L[supplier001][warehouse002][item001][0]>[I] == 0;
+  [linear] <c76>: <X[supplier001][warehouse002][item002][1]>[I] -<L[supplier001][warehouse002][item002][-1]>[I] == 0;
+  [linear] <c77>: <X[supplier001][warehouse002][item002][2]>[I] -<L[supplier001][warehouse002][item002][0]>[I] == 0;
+  [linear] <c78>: <X[supplier001][warehouse002][item003][1]>[I] -<L[supplier001][warehouse002][item003][-1]>[I] == 0;
+  [linear] <c79>: <X[supplier001][warehouse002][item003][2]>[I] -<L[supplier001][warehouse002][item003][0]>[I] == 0;
+  [linear] <c80>: <X[supplier001][warehouse002][item004][1]>[I] -<L[supplier001][warehouse002][item004][-1]>[I] == 0;
+  [linear] <c81>: <X[supplier001][warehouse002][item004][2]>[I] -<L[supplier001][warehouse002][item004][0]>[I] == 0;
+  [linear] <c82>: <X[supplier002][warehouse001][item001][1]>[I] -<L[supplier002][warehouse001][item001][-1]>[I] == 0;
+  [linear] <c83>: <X[supplier002][warehouse001][item001][2]>[I] -<L[supplier002][warehouse001][item001][0]>[I] == 0;
+  [linear] <c84>: <X[supplier002][warehouse001][item002][1]>[I] -<L[supplier002][warehouse001][item002][-1]>[I] == 0;
+  [linear] <c85>: <X[supplier002][warehouse001][item002][2]>[I] -<L[supplier002][warehouse001][item002][0]>[I] == 0;
+  [linear] <c86>: <X[supplier002][warehouse001][item003][1]>[I] -<L[supplier002][warehouse001][item003][-1]>[I] == 0;
+  [linear] <c87>: <X[supplier002][warehouse001][item003][2]>[I] -<L[supplier002][warehouse001][item003][0]>[I] == 0;
+  [linear] <c88>: <X[supplier002][warehouse001][item004][1]>[I] -<L[supplier002][warehouse001][item004][-1]>[I] == 0;
+  [linear] <c89>: <X[supplier002][warehouse001][item004][2]>[I] -<L[supplier002][warehouse001][item004][0]>[I] == 0;
+  [linear] <c90>: <X[supplier002][warehouse002][item001][1]>[I] -<L[supplier002][warehouse002][item001][-1]>[I] == 0;
+  [linear] <c91>: <X[supplier002][warehouse002][item001][2]>[I] -<L[supplier002][warehouse002][item001][0]>[I] == 0;
+  [linear] <c92>: <X[supplier002][warehouse002][item002][1]>[I] -<L[supplier002][warehouse002][item002][-1]>[I] == 0;
+  [linear] <c93>: <X[supplier002][warehouse002][item002][2]>[I] -<L[supplier002][warehouse002][item002][0]>[I] == 0;
+  [linear] <c94>: <X[supplier002][warehouse002][item003][1]>[I] -<L[supplier002][warehouse002][item003][-1]>[I] == 0;
+  [linear] <c95>: <X[supplier002][warehouse002][item003][2]>[I] -<L[supplier002][warehouse002][item003][0]>[I] == 0;
+  [linear] <c96>: <X[supplier002][warehouse002][item004][1]>[I] -<L[supplier002][warehouse002][item004][-1]>[I] == 0;
+  [linear] <c97>: <X[supplier002][warehouse002][item004][2]>[I] -<L[supplier002][warehouse002][item004][0]>[I] == 0;
+  [linear] <c98>: <X[supplier003][warehouse001][item001][1]>[I] -<L[supplier003][warehouse001][item001][-1]>[I] == 0;
+  [linear] <c99>: <X[supplier003][warehouse001][item001][2]>[I] -<L[supplier003][warehouse001][item001][0]>[I] == 0;
+  [linear] <c100>: <X[supplier003][warehouse001][item002][1]>[I] -<L[supplier003][warehouse001][item002][-1]>[I] == 0;
+  [linear] <c101>: <X[supplier003][warehouse001][item002][2]>[I] -<L[supplier003][warehouse001][item002][0]>[I] == 0;
+  [linear] <c102>: <X[supplier003][warehouse001][item003][1]>[I] -<L[supplier003][warehouse001][item003][-1]>[I] == 0;
+  [linear] <c103>: <X[supplier003][warehouse001][item003][2]>[I] -<L[supplier003][warehouse001][item003][0]>[I] == 0;
+  [linear] <c104>: <X[supplier003][warehouse001][item004][1]>[I] -<L[supplier003][warehouse001][item004][-1]>[I] == 0;
+  [linear] <c105>: <X[supplier003][warehouse001][item004][2]>[I] -<L[supplier003][warehouse001][item004][0]>[I] == 0;
+  [linear] <c106>: <X[supplier003][warehouse002][item001][1]>[I] -<L[supplier003][warehouse002][item001][-1]>[I] == 0;
+  [linear] <c107>: <X[supplier003][warehouse002][item001][2]>[I] -<L[supplier003][warehouse002][item001][0]>[I] == 0;
+  [linear] <c108>: <X[supplier003][warehouse002][item002][1]>[I] -<L[supplier003][warehouse002][item002][-1]>[I] == 0;
+  [linear] <c109>: <X[supplier003][warehouse002][item002][2]>[I] -<L[supplier003][warehouse002][item002][0]>[I] == 0;
+  [linear] <c110>: <X[supplier003][warehouse002][item003][1]>[I] -<L[supplier003][warehouse002][item003][-1]>[I] == 0;
+  [linear] <c111>: <X[supplier003][warehouse002][item003][2]>[I] -<L[supplier003][warehouse002][item003][0]>[I] == 0;
+  [linear] <c112>: <X[supplier003][warehouse002][item004][1]>[I] -<L[supplier003][warehouse002][item004][-1]>[I] == 0;
+  [linear] <c113>: <X[supplier003][warehouse002][item004][2]>[I] -<L[supplier003][warehouse002][item004][0]>[I] == 0;
+  [linear] <c114>: <X[supplier004][warehouse001][item001][1]>[I] -<L[supplier004][warehouse001][item001][-1]>[I] == 0;
+  [linear] <c115>: <X[supplier004][warehouse001][item001][2]>[I] -<L[supplier004][warehouse001][item001][0]>[I] == 0;
+  [linear] <c116>: <X[supplier004][warehouse001][item002][1]>[I] -<L[supplier004][warehouse001][item002][-1]>[I] == 0;
+  [linear] <c117>: <X[supplier004][warehouse001][item002][2]>[I] -<L[supplier004][warehouse001][item002][0]>[I] == 0;
+  [linear] <c118>: <X[supplier004][warehouse001][item003][1]>[I] -<L[supplier004][warehouse001][item003][-1]>[I] == 0;
+  [linear] <c119>: <X[supplier004][warehouse001][item003][2]>[I] -<L[supplier004][warehouse001][item003][0]>[I] == 0;
+  [linear] <c120>: <X[supplier004][warehouse001][item004][1]>[I] -<L[supplier004][warehouse001][item004][-1]>[I] == 0;
+  [linear] <c121>: <X[supplier004][warehouse001][item004][2]>[I] -<L[supplier004][warehouse001][item004][0]>[I] == 0;
+  [linear] <c122>: <X[supplier004][warehouse002][item001][1]>[I] -<L[supplier004][warehouse002][item001][-1]>[I] == 0;
+  [linear] <c123>: <X[supplier004][warehouse002][item001][2]>[I] -<L[supplier004][warehouse002][item001][0]>[I] == 0;
+  [linear] <c124>: <X[supplier004][warehouse002][item002][1]>[I] -<L[supplier004][warehouse002][item002][-1]>[I] == 0;
+  [linear] <c125>: <X[supplier004][warehouse002][item002][2]>[I] -<L[supplier004][warehouse002][item002][0]>[I] == 0;
+  [linear] <c126>: <X[supplier004][warehouse002][item003][1]>[I] -<L[supplier004][warehouse002][item003][-1]>[I] == 0;
+  [linear] <c127>: <X[supplier004][warehouse002][item003][2]>[I] -<L[supplier004][warehouse002][item003][0]>[I] == 0;
+  [linear] <c128>: <X[supplier004][warehouse002][item004][1]>[I] -<L[supplier004][warehouse002][item004][-1]>[I] == 0;
+  [linear] <c129>: <X[supplier004][warehouse002][item004][2]>[I] -<L[supplier004][warehouse002][item004][0]>[I] == 0;
+  [linear] <c130>: <X[supplier001][warehouse001][item001][1]>[I] +<X[supplier002][warehouse001][item001][1]>[I] +<X[supplier003][warehouse001][item001][1]>[I] +<X[supplier004][warehouse001][item001][1]>[I] -<W[warehouse001][destination001][item001][1]>[I] -<W[warehouse001][destination002][item001][1]>[I] -<W[warehouse001][destination003][item001][1]>[I] -<W[warehouse001][destination004][item001][1]>[I] -<W[warehouse001][destination005][item001][1]>[I] -<W[warehouse001][destination006][item001][1]>[I] -<W[warehouse001][destination007][item001][1]>[I] -<W[warehouse001][destination008][item001][1]>[I] == 0;
+  [linear] <c131>: <X[supplier001][warehouse001][item001][2]>[I] +<X[supplier002][warehouse001][item001][2]>[I] +<X[supplier003][warehouse001][item001][2]>[I] +<X[supplier004][warehouse001][item001][2]>[I] -<W[warehouse001][destination001][item001][2]>[I] -<W[warehouse001][destination002][item001][2]>[I] -<W[warehouse001][destination003][item001][2]>[I] -<W[warehouse001][destination004][item001][2]>[I] -<W[warehouse001][destination005][item001][2]>[I] -<W[warehouse001][destination006][item001][2]>[I] -<W[warehouse001][destination007][item001][2]>[I] -<W[warehouse001][destination008][item001][2]>[I] == 0;
+  [linear] <c132>: <X[supplier001][warehouse001][item002][1]>[I] +<X[supplier002][warehouse001][item002][1]>[I] +<X[supplier003][warehouse001][item002][1]>[I] +<X[supplier004][warehouse001][item002][1]>[I] -<W[warehouse001][destination001][item002][1]>[I] -<W[warehouse001][destination002][item002][1]>[I] -<W[warehouse001][destination003][item002][1]>[I] -<W[warehouse001][destination004][item002][1]>[I] -<W[warehouse001][destination005][item002][1]>[I] -<W[warehouse001][destination006][item002][1]>[I] -<W[warehouse001][destination007][item002][1]>[I] -<W[warehouse001][destination008][item002][1]>[I] == 0;
+  [linear] <c133>: <X[supplier001][warehouse001][item002][2]>[I] +<X[supplier002][warehouse001][item002][2]>[I] +<X[supplier003][warehouse001][item002][2]>[I] +<X[supplier004][warehouse001][item002][2]>[I] -<W[warehouse001][destination001][item002][2]>[I] -<W[warehouse001][destination002][item002][2]>[I] -<W[warehouse001][destination003][item002][2]>[I] -<W[warehouse001][destination004][item002][2]>[I] -<W[warehouse001][destination005][item002][2]>[I] -<W[warehouse001][destination006][item002][2]>[I] -<W[warehouse001][destination007][item002][2]>[I] -<W[warehouse001][destination008][item002][2]>[I] == 0;
+  [linear] <c134>: <X[supplier001][warehouse001][item003][1]>[I] +<X[supplier002][warehouse001][item003][1]>[I] +<X[supplier003][warehouse001][item003][1]>[I] +<X[supplier004][warehouse001][item003][1]>[I] -<W[warehouse001][destination001][item003][1]>[I] -<W[warehouse001][destination002][item003][1]>[I] -<W[warehouse001][destination003][item003][1]>[I] -<W[warehouse001][destination004][item003][1]>[I] -<W[warehouse001][destination005][item003][1]>[I] -<W[warehouse001][destination006][item003][1]>[I] -<W[warehouse001][destination007][item003][1]>[I] -<W[warehouse001][destination008][item003][1]>[I] == 0;
+  [linear] <c135>: <X[supplier001][warehouse001][item003][2]>[I] +<X[supplier002][warehouse001][item003][2]>[I] +<X[supplier003][warehouse001][item003][2]>[I] +<X[supplier004][warehouse001][item003][2]>[I] -<W[warehouse001][destination001][item003][2]>[I] -<W[warehouse001][destination002][item003][2]>[I] -<W[warehouse001][destination003][item003][2]>[I] -<W[warehouse001][destination004][item003][2]>[I] -<W[warehouse001][destination005][item003][2]>[I] -<W[warehouse001][destination006][item003][2]>[I] -<W[warehouse001][destination007][item003][2]>[I] -<W[warehouse001][destination008][item003][2]>[I] == 0;
+  [linear] <c136>: <X[supplier001][warehouse001][item004][1]>[I] +<X[supplier002][warehouse001][item004][1]>[I] +<X[supplier003][warehouse001][item004][1]>[I] +<X[supplier004][warehouse001][item004][1]>[I] -<W[warehouse001][destination001][item004][1]>[I] -<W[warehouse001][destination002][item004][1]>[I] -<W[warehouse001][destination003][item004][1]>[I] -<W[warehouse001][destination004][item004][1]>[I] -<W[warehouse001][destination005][item004][1]>[I] -<W[warehouse001][destination006][item004][1]>[I] -<W[warehouse001][destination007][item004][1]>[I] -<W[warehouse001][destination008][item004][1]>[I] == 0;
+  [linear] <c137>: <X[supplier001][warehouse001][item004][2]>[I] +<X[supplier002][warehouse001][item004][2]>[I] +<X[supplier003][warehouse001][item004][2]>[I] +<X[supplier004][warehouse001][item004][2]>[I] -<W[warehouse001][destination001][item004][2]>[I] -<W[warehouse001][destination002][item004][2]>[I] -<W[warehouse001][destination003][item004][2]>[I] -<W[warehouse001][destination004][item004][2]>[I] -<W[warehouse001][destination005][item004][2]>[I] -<W[warehouse001][destination006][item004][2]>[I] -<W[warehouse001][destination007][item004][2]>[I] -<W[warehouse001][destination008][item004][2]>[I] == 0;
+  [linear] <c138>: <X[supplier001][warehouse002][item001][1]>[I] +<X[supplier002][warehouse002][item001][1]>[I] +<X[supplier003][warehouse002][item001][1]>[I] +<X[supplier004][warehouse002][item001][1]>[I] -<W[warehouse002][destination001][item001][1]>[I] -<W[warehouse002][destination002][item001][1]>[I] -<W[warehouse002][destination003][item001][1]>[I] -<W[warehouse002][destination004][item001][1]>[I] -<W[warehouse002][destination005][item001][1]>[I] -<W[warehouse002][destination006][item001][1]>[I] -<W[warehouse002][destination007][item001][1]>[I] -<W[warehouse002][destination008][item001][1]>[I] == 0;
+  [linear] <c139>: <X[supplier001][warehouse002][item001][2]>[I] +<X[supplier002][warehouse002][item001][2]>[I] +<X[supplier003][warehouse002][item001][2]>[I] +<X[supplier004][warehouse002][item001][2]>[I] -<W[warehouse002][destination001][item001][2]>[I] -<W[warehouse002][destination002][item001][2]>[I] -<W[warehouse002][destination003][item001][2]>[I] -<W[warehouse002][destination004][item001][2]>[I] -<W[warehouse002][destination005][item001][2]>[I] -<W[warehouse002][destination006][item001][2]>[I] -<W[warehouse002][destination007][item001][2]>[I] -<W[warehouse002][destination008][item001][2]>[I] == 0;
+  [linear] <c140>: <X[supplier001][warehouse002][item002][1]>[I] +<X[supplier002][warehouse002][item002][1]>[I] +<X[supplier003][warehouse002][item002][1]>[I] +<X[supplier004][warehouse002][item002][1]>[I] -<W[warehouse002][destination001][item002][1]>[I] -<W[warehouse002][destination002][item002][1]>[I] -<W[warehouse002][destination003][item002][1]>[I] -<W[warehouse002][destination004][item002][1]>[I] -<W[warehouse002][destination005][item002][1]>[I] -<W[warehouse002][destination006][item002][1]>[I] -<W[warehouse002][destination007][item002][1]>[I] -<W[warehouse002][destination008][item002][1]>[I] == 0;
+  [linear] <c141>: <X[supplier001][warehouse002][item002][2]>[I] +<X[supplier002][warehouse002][item002][2]>[I] +<X[supplier003][warehouse002][item002][2]>[I] +<X[supplier004][warehouse002][item002][2]>[I] -<W[warehouse002][destination001][item002][2]>[I] -<W[warehouse002][destination002][item002][2]>[I] -<W[warehouse002][destination003][item002][2]>[I] -<W[warehouse002][destination004][item002][2]>[I] -<W[warehouse002][destination005][item002][2]>[I] -<W[warehouse002][destination006][item002][2]>[I] -<W[warehouse002][destination007][item002][2]>[I] -<W[warehouse002][destination008][item002][2]>[I] == 0;
+  [linear] <c142>: <X[supplier001][warehouse002][item003][1]>[I] +<X[supplier002][warehouse002][item003][1]>[I] +<X[supplier003][warehouse002][item003][1]>[I] +<X[supplier004][warehouse002][item003][1]>[I] -<W[warehouse002][destination001][item003][1]>[I] -<W[warehouse002][destination002][item003][1]>[I] -<W[warehouse002][destination003][item003][1]>[I] -<W[warehouse002][destination004][item003][1]>[I] -<W[warehouse002][destination005][item003][1]>[I] -<W[warehouse002][destination006][item003][1]>[I] -<W[warehouse002][destination007][item003][1]>[I] -<W[warehouse002][destination008][item003][1]>[I] == 0;
+  [linear] <c143>: <X[supplier001][warehouse002][item003][2]>[I] +<X[supplier002][warehouse002][item003][2]>[I] +<X[supplier003][warehouse002][item003][2]>[I] +<X[supplier004][warehouse002][item003][2]>[I] -<W[warehouse002][destination001][item003][2]>[I] -<W[warehouse002][destination002][item003][2]>[I] -<W[warehouse002][destination003][item003][2]>[I] -<W[warehouse002][destination004][item003][2]>[I] -<W[warehouse002][destination005][item003][2]>[I] -<W[warehouse002][destination006][item003][2]>[I] -<W[warehouse002][destination007][item003][2]>[I] -<W[warehouse002][destination008][item003][2]>[I] == 0;
+  [linear] <c144>: <X[supplier001][warehouse002][item004][1]>[I] +<X[supplier002][warehouse002][item004][1]>[I] +<X[supplier003][warehouse002][item004][1]>[I] +<X[supplier004][warehouse002][item004][1]>[I] -<W[warehouse002][destination001][item004][1]>[I] -<W[warehouse002][destination002][item004][1]>[I] -<W[warehouse002][destination003][item004][1]>[I] -<W[warehouse002][destination004][item004][1]>[I] -<W[warehouse002][destination005][item004][1]>[I] -<W[warehouse002][destination006][item004][1]>[I] -<W[warehouse002][destination007][item004][1]>[I] -<W[warehouse002][destination008][item004][1]>[I] == 0;
+  [linear] <c145>: <X[supplier001][warehouse002][item004][2]>[I] +<X[supplier002][warehouse002][item004][2]>[I] +<X[supplier003][warehouse002][item004][2]>[I] +<X[supplier004][warehouse002][item004][2]>[I] -<W[warehouse002][destination001][item004][2]>[I] -<W[warehouse002][destination002][item004][2]>[I] -<W[warehouse002][destination003][item004][2]>[I] -<W[warehouse002][destination004][item004][2]>[I] -<W[warehouse002][destination005][item004][2]>[I] -<W[warehouse002][destination006][item004][2]>[I] -<W[warehouse002][destination007][item004][2]>[I] -<W[warehouse002][destination008][item004][2]>[I] == 0;
+  [linear] <c146>: <X[supplier001][warehouse001][item001][1]>[I] -200<Q[supplier001][warehouse001][item001][1]>[I] <= 0;
+  [linear] <c147>: <X[supplier001][warehouse001][item001][2]>[I] -200<Q[supplier001][warehouse001][item001][2]>[I] <= 0;
+  [linear] <c148>: <X[supplier001][warehouse001][item002][1]>[I] -150<Q[supplier001][warehouse001][item002][1]>[I] <= 0;
+  [linear] <c149>: <X[supplier001][warehouse001][item002][2]>[I] -150<Q[supplier001][warehouse001][item002][2]>[I] <= 0;
+  [linear] <c150>: <X[supplier001][warehouse001][item003][1]>[I] -100<Q[supplier001][warehouse001][item003][1]>[I] <= 0;
+  [linear] <c151>: <X[supplier001][warehouse001][item003][2]>[I] -100<Q[supplier001][warehouse001][item003][2]>[I] <= 0;
+  [linear] <c152>: <X[supplier001][warehouse001][item004][1]>[I] -300<Q[supplier001][warehouse001][item004][1]>[I] <= 0;
+  [linear] <c153>: <X[supplier001][warehouse001][item004][2]>[I] -300<Q[supplier001][warehouse001][item004][2]>[I] <= 0;
+  [linear] <c154>: <X[supplier001][warehouse002][item001][1]>[I] -200<Q[supplier001][warehouse002][item001][1]>[I] <= 0;
+  [linear] <c155>: <X[supplier001][warehouse002][item001][2]>[I] -200<Q[supplier001][warehouse002][item001][2]>[I] <= 0;
+  [linear] <c156>: <X[supplier001][warehouse002][item002][1]>[I] -150<Q[supplier001][warehouse002][item002][1]>[I] <= 0;
+  [linear] <c157>: <X[supplier001][warehouse002][item002][2]>[I] -150<Q[supplier001][warehouse002][item002][2]>[I] <= 0;
+  [linear] <c158>: <X[supplier001][warehouse002][item003][1]>[I] -100<Q[supplier001][warehouse002][item003][1]>[I] <= 0;
+  [linear] <c159>: <X[supplier001][warehouse002][item003][2]>[I] -100<Q[supplier001][warehouse002][item003][2]>[I] <= 0;
+  [linear] <c160>: <X[supplier001][warehouse002][item004][1]>[I] -300<Q[supplier001][warehouse002][item004][1]>[I] <= 0;
+  [linear] <c161>: <X[supplier001][warehouse002][item004][2]>[I] -300<Q[supplier001][warehouse002][item004][2]>[I] <= 0;
+  [linear] <c162>: <X[supplier002][warehouse001][item001][1]>[I] -200<Q[supplier002][warehouse001][item001][1]>[I] <= 0;
+  [linear] <c163>: <X[supplier002][warehouse001][item001][2]>[I] -200<Q[supplier002][warehouse001][item001][2]>[I] <= 0;
+  [linear] <c164>: <X[supplier002][warehouse001][item002][1]>[I] -150<Q[supplier002][warehouse001][item002][1]>[I] <= 0;
+  [linear] <c165>: <X[supplier002][warehouse001][item002][2]>[I] -150<Q[supplier002][warehouse001][item002][2]>[I] <= 0;
+  [linear] <c166>: <X[supplier002][warehouse001][item003][1]>[I] -100<Q[supplier002][warehouse001][item003][1]>[I] <= 0;
+  [linear] <c167>: <X[supplier002][warehouse001][item003][2]>[I] -100<Q[supplier002][warehouse001][item003][2]>[I] <= 0;
+  [linear] <c168>: <X[supplier002][warehouse001][item004][1]>[I] -300<Q[supplier002][warehouse001][item004][1]>[I] <= 0;
+  [linear] <c169>: <X[supplier002][warehouse001][item004][2]>[I] -300<Q[supplier002][warehouse001][item004][2]>[I] <= 0;
+  [linear] <c170>: <X[supplier002][warehouse002][item001][1]>[I] -200<Q[supplier002][warehouse002][item001][1]>[I] <= 0;
+  [linear] <c171>: <X[supplier002][warehouse002][item001][2]>[I] -200<Q[supplier002][warehouse002][item001][2]>[I] <= 0;
+  [linear] <c172>: <X[supplier002][warehouse002][item002][1]>[I] -150<Q[supplier002][warehouse002][item002][1]>[I] <= 0;
+  [linear] <c173>: <X[supplier002][warehouse002][item002][2]>[I] -150<Q[supplier002][warehouse002][item002][2]>[I] <= 0;
+  [linear] <c174>: <X[supplier002][warehouse002][item003][1]>[I] -100<Q[supplier002][warehouse002][item003][1]>[I] <= 0;
+  [linear] <c175>: <X[supplier002][warehouse002][item003][2]>[I] -100<Q[supplier002][warehouse002][item003][2]>[I] <= 0;
+  [linear] <c176>: <X[supplier002][warehouse002][item004][1]>[I] -300<Q[supplier002][warehouse002][item004][1]>[I] <= 0;
+  [linear] <c177>: <X[supplier002][warehouse002][item004][2]>[I] -300<Q[supplier002][warehouse002][item004][2]>[I] <= 0;
+  [linear] <c178>: <X[supplier003][warehouse001][item001][1]>[I] -200<Q[supplier003][warehouse001][item001][1]>[I] <= 0;
+  [linear] <c179>: <X[supplier003][warehouse001][item001][2]>[I] -200<Q[supplier003][warehouse001][item001][2]>[I] <= 0;
+  [linear] <c180>: <X[supplier003][warehouse001][item002][1]>[I] -150<Q[supplier003][warehouse001][item002][1]>[I] <= 0;
+  [linear] <c181>: <X[supplier003][warehouse001][item002][2]>[I] -150<Q[supplier003][warehouse001][item002][2]>[I] <= 0;
+  [linear] <c182>: <X[supplier003][warehouse001][item003][1]>[I] -100<Q[supplier003][warehouse001][item003][1]>[I] <= 0;
+  [linear] <c183>: <X[supplier003][warehouse001][item003][2]>[I] -100<Q[supplier003][warehouse001][item003][2]>[I] <= 0;
+  [linear] <c184>: <X[supplier003][warehouse001][item004][1]>[I] -300<Q[supplier003][warehouse001][item004][1]>[I] <= 0;
+  [linear] <c185>: <X[supplier003][warehouse001][item004][2]>[I] -300<Q[supplier003][warehouse001][item004][2]>[I] <= 0;
+  [linear] <c186>: <X[supplier003][warehouse002][item001][1]>[I] -200<Q[supplier003][warehouse002][item001][1]>[I] <= 0;
+  [linear] <c187>: <X[supplier003][warehouse002][item001][2]>[I] -200<Q[supplier003][warehouse002][item001][2]>[I] <= 0;
+  [linear] <c188>: <X[supplier003][warehouse002][item002][1]>[I] -150<Q[supplier003][warehouse002][item002][1]>[I] <= 0;
+  [linear] <c189>: <X[supplier003][warehouse002][item002][2]>[I] -150<Q[supplier003][warehouse002][item002][2]>[I] <= 0;
+  [linear] <c190>: <X[supplier003][warehouse002][item003][1]>[I] -100<Q[supplier003][warehouse002][item003][1]>[I] <= 0;
+  [linear] <c191>: <X[supplier003][warehouse002][item003][2]>[I] -100<Q[supplier003][warehouse002][item003][2]>[I] <= 0;
+  [linear] <c192>: <X[supplier003][warehouse002][item004][1]>[I] -300<Q[supplier003][warehouse002][item004][1]>[I] <= 0;
+  [linear] <c193>: <X[supplier003][warehouse002][item004][2]>[I] -300<Q[supplier003][warehouse002][item004][2]>[I] <= 0;
+  [linear] <c194>: <X[supplier004][warehouse001][item001][1]>[I] -200<Q[supplier004][warehouse001][item001][1]>[I] <= 0;
+  [linear] <c195>: <X[supplier004][warehouse001][item001][2]>[I] -200<Q[supplier004][warehouse001][item001][2]>[I] <= 0;
+  [linear] <c196>: <X[supplier004][warehouse001][item002][1]>[I] -150<Q[supplier004][warehouse001][item002][1]>[I] <= 0;
+  [linear] <c197>: <X[supplier004][warehouse001][item002][2]>[I] -150<Q[supplier004][warehouse001][item002][2]>[I] <= 0;
+  [linear] <c198>: <X[supplier004][warehouse001][item003][1]>[I] -100<Q[supplier004][warehouse001][item003][1]>[I] <= 0;
+  [linear] <c199>: <X[supplier004][warehouse001][item003][2]>[I] -100<Q[supplier004][warehouse001][item003][2]>[I] <= 0;
+  [linear] <c200>: <X[supplier004][warehouse001][item004][1]>[I] -300<Q[supplier004][warehouse001][item004][1]>[I] <= 0;
+  [linear] <c201>: <X[supplier004][warehouse001][item004][2]>[I] -300<Q[supplier004][warehouse001][item004][2]>[I] <= 0;
+  [linear] <c202>: <X[supplier004][warehouse002][item001][1]>[I] -200<Q[supplier004][warehouse002][item001][1]>[I] <= 0;
+  [linear] <c203>: <X[supplier004][warehouse002][item001][2]>[I] -200<Q[supplier004][warehouse002][item001][2]>[I] <= 0;
+  [linear] <c204>: <X[supplier004][warehouse002][item002][1]>[I] -150<Q[supplier004][warehouse002][item002][1]>[I] <= 0;
+  [linear] <c205>: <X[supplier004][warehouse002][item002][2]>[I] -150<Q[supplier004][warehouse002][item002][2]>[I] <= 0;
+  [linear] <c206>: <X[supplier004][warehouse002][item003][1]>[I] -100<Q[supplier004][warehouse002][item003][1]>[I] <= 0;
+  [linear] <c207>: <X[supplier004][warehouse002][item003][2]>[I] -100<Q[supplier004][warehouse002][item003][2]>[I] <= 0;
+  [linear] <c208>: <X[supplier004][warehouse002][item004][1]>[I] -300<Q[supplier004][warehouse002][item004][1]>[I] <= 0;
+  [linear] <c209>: <X[supplier004][warehouse002][item004][2]>[I] -300<Q[supplier004][warehouse002][item004][2]>[I] <= 0;
+  [linear] <c210>: <X[supplier001][warehouse001][item001][1]>[I] <= 4000;
+  [linear] <c211>: <X[supplier001][warehouse001][item001][2]>[I] <= 4000;
+  [linear] <c212>: <X[supplier001][warehouse001][item002][1]>[I] <= 4000;
+  [linear] <c213>: <X[supplier001][warehouse001][item002][2]>[I] <= 4000;
+  [linear] <c214>: <X[supplier001][warehouse001][item003][1]>[I] <= 6000;
+  [linear] <c215>: <X[supplier001][warehouse001][item003][2]>[I] <= 6000;
+  [linear] <c216>: <X[supplier001][warehouse001][item004][1]>[I] <= 2000;
+  [linear] <c217>: <X[supplier001][warehouse001][item004][2]>[I] <= 2000;
+  [linear] <c218>: <X[supplier001][warehouse002][item001][1]>[I] <= 4000;
+  [linear] <c219>: <X[supplier001][warehouse002][item001][2]>[I] <= 4000;
+  [linear] <c220>: <X[supplier001][warehouse002][item002][1]>[I] <= 4000;
+  [linear] <c221>: <X[supplier001][warehouse002][item002][2]>[I] <= 4000;
+  [linear] <c222>: <X[supplier001][warehouse002][item003][1]>[I] <= 6000;
+  [linear] <c223>: <X[supplier001][warehouse002][item003][2]>[I] <= 6000;
+  [linear] <c224>: <X[supplier001][warehouse002][item004][1]>[I] <= 2000;
+  [linear] <c225>: <X[supplier001][warehouse002][item004][2]>[I] <= 2000;
+  [linear] <c226>: <X[supplier002][warehouse001][item001][1]>[I] <= 4000;
+  [linear] <c227>: <X[supplier002][warehouse001][item001][2]>[I] <= 4000;
+  [linear] <c228>: <X[supplier002][warehouse001][item002][1]>[I] <= 2000;
+  [linear] <c229>: <X[supplier002][warehouse001][item002][2]>[I] <= 2000;
+  [linear] <c230>: <X[supplier002][warehouse001][item003][1]>[I] <= 0;
+  [linear] <c231>: <X[supplier002][warehouse001][item003][2]>[I] <= 0;
+  [linear] <c232>: <X[supplier002][warehouse001][item004][1]>[I] <= 4000;
+  [linear] <c233>: <X[supplier002][warehouse001][item004][2]>[I] <= 4000;
+  [linear] <c234>: <X[supplier002][warehouse002][item001][1]>[I] <= 4000;
+  [linear] <c235>: <X[supplier002][warehouse002][item001][2]>[I] <= 4000;
+  [linear] <c236>: <X[supplier002][warehouse002][item002][1]>[I] <= 2000;
+  [linear] <c237>: <X[supplier002][warehouse002][item002][2]>[I] <= 2000;
+  [linear] <c238>: <X[supplier002][warehouse002][item003][1]>[I] <= 0;
+  [linear] <c239>: <X[supplier002][warehouse002][item003][2]>[I] <= 0;
+  [linear] <c240>: <X[supplier002][warehouse002][item004][1]>[I] <= 4000;
+  [linear] <c241>: <X[supplier002][warehouse002][item004][2]>[I] <= 4000;
+  [linear] <c242>: <X[supplier003][warehouse001][item001][1]>[I] <= 3000;
+  [linear] <c243>: <X[supplier003][warehouse001][item001][2]>[I] <= 3000;
+  [linear] <c244>: <X[supplier003][warehouse001][item002][1]>[I] <= 4000;
+  [linear] <c245>: <X[supplier003][warehouse001][item002][2]>[I] <= 4000;
+  [linear] <c246>: <X[supplier003][warehouse001][item003][1]>[I] <= 4000;
+  [linear] <c247>: <X[supplier003][warehouse001][item003][2]>[I] <= 4000;
+  [linear] <c248>: <X[supplier003][warehouse001][item004][1]>[I] <= 4000;
+  [linear] <c249>: <X[supplier003][warehouse001][item004][2]>[I] <= 4000;
+  [linear] <c250>: <X[supplier003][warehouse002][item001][1]>[I] <= 3000;
+  [linear] <c251>: <X[supplier003][warehouse002][item001][2]>[I] <= 3000;
+  [linear] <c252>: <X[supplier003][warehouse002][item002][1]>[I] <= 4000;
+  [linear] <c253>: <X[supplier003][warehouse002][item002][2]>[I] <= 4000;
+  [linear] <c254>: <X[supplier003][warehouse002][item003][1]>[I] <= 4000;
+  [linear] <c255>: <X[supplier003][warehouse002][item003][2]>[I] <= 4000;
+  [linear] <c256>: <X[supplier003][warehouse002][item004][1]>[I] <= 4000;
+  [linear] <c257>: <X[supplier003][warehouse002][item004][2]>[I] <= 4000;
+  [linear] <c258>: <X[supplier004][warehouse001][item001][1]>[I] <= 3000;
+  [linear] <c259>: <X[supplier004][warehouse001][item001][2]>[I] <= 3000;
+  [linear] <c260>: <X[supplier004][warehouse001][item002][1]>[I] <= 3000;
+  [linear] <c261>: <X[supplier004][warehouse001][item002][2]>[I] <= 3000;
+  [linear] <c262>: <X[supplier004][warehouse001][item003][1]>[I] <= 2000;
+  [linear] <c263>: <X[supplier004][warehouse001][item003][2]>[I] <= 2000;
+  [linear] <c264>: <X[supplier004][warehouse001][item004][1]>[I] <= 2000;
+  [linear] <c265>: <X[supplier004][warehouse001][item004][2]>[I] <= 2000;
+  [linear] <c266>: <X[supplier004][warehouse002][item001][1]>[I] <= 3000;
+  [linear] <c267>: <X[supplier004][warehouse002][item001][2]>[I] <= 3000;
+  [linear] <c268>: <X[supplier004][warehouse002][item002][1]>[I] <= 3000;
+  [linear] <c269>: <X[supplier004][warehouse002][item002][2]>[I] <= 3000;
+  [linear] <c270>: <X[supplier004][warehouse002][item003][1]>[I] <= 2000;
+  [linear] <c271>: <X[supplier004][warehouse002][item003][2]>[I] <= 2000;
+  [linear] <c272>: <X[supplier004][warehouse002][item004][1]>[I] <= 2000;
+  [linear] <c273>: <X[supplier004][warehouse002][item004][2]>[I] <= 2000;
+  [linear] <c274>: <Z[warehouse001][1]>[B] -<Y[warehouse001][1]>[B] <= 0;
+  [linear] <c275>: <Z[warehouse001][2]>[B] -<Y[warehouse001][1]>[B] -<Y[warehouse001][2]>[B] <= 0;
+  [linear] <c276>: <Z[warehouse002][1]>[B] -<Y[warehouse002][1]>[B] <= 0;
+  [linear] <c277>: <Z[warehouse002][2]>[B] -<Y[warehouse002][1]>[B] -<Y[warehouse002][2]>[B] <= 0;
+  [linear] <c278>: <Y[warehouse001][1]>[B] +<Y[warehouse001][2]>[B] <= 1;
+  [linear] <c279>: <Y[warehouse002][1]>[B] +<Y[warehouse002][2]>[B] <= 1;
+  [linear] <c280>: <X[supplier001][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c281>: <X[supplier001][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c282>: <X[supplier001][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c283>: <X[supplier001][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c284>: <X[supplier001][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c285>: <X[supplier001][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c286>: <X[supplier001][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c287>: <X[supplier001][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c288>: <X[supplier001][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c289>: <X[supplier001][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c290>: <X[supplier001][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c291>: <X[supplier001][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c292>: <X[supplier001][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c293>: <X[supplier001][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c294>: <X[supplier001][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c295>: <X[supplier001][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c296>: <X[supplier002][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c297>: <X[supplier002][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c298>: <X[supplier002][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c299>: <X[supplier002][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c300>: <X[supplier002][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c301>: <X[supplier002][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c302>: <X[supplier002][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c303>: <X[supplier002][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c304>: <X[supplier002][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c305>: <X[supplier002][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c306>: <X[supplier002][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c307>: <X[supplier002][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c308>: <X[supplier002][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c309>: <X[supplier002][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c310>: <X[supplier002][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c311>: <X[supplier002][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c312>: <X[supplier003][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c313>: <X[supplier003][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c314>: <X[supplier003][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c315>: <X[supplier003][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c316>: <X[supplier003][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c317>: <X[supplier003][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c318>: <X[supplier003][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c319>: <X[supplier003][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c320>: <X[supplier003][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c321>: <X[supplier003][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c322>: <X[supplier003][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c323>: <X[supplier003][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c324>: <X[supplier003][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c325>: <X[supplier003][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c326>: <X[supplier003][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c327>: <X[supplier003][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c328>: <X[supplier004][warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c329>: <X[supplier004][warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c330>: <X[supplier004][warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c331>: <X[supplier004][warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c332>: <X[supplier004][warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c333>: <X[supplier004][warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c334>: <X[supplier004][warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c335>: <X[supplier004][warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c336>: <X[supplier004][warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c337>: <X[supplier004][warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c338>: <X[supplier004][warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c339>: <X[supplier004][warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c340>: <X[supplier004][warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c341>: <X[supplier004][warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c342>: <X[supplier004][warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c343>: <X[supplier004][warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c344>: <W[warehouse001][destination001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c345>: <W[warehouse001][destination001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c346>: <W[warehouse001][destination001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c347>: <W[warehouse001][destination001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c348>: <W[warehouse001][destination001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c349>: <W[warehouse001][destination001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c350>: <W[warehouse001][destination001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c351>: <W[warehouse001][destination001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c352>: <W[warehouse001][destination002][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c353>: <W[warehouse001][destination002][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c354>: <W[warehouse001][destination002][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c355>: <W[warehouse001][destination002][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c356>: <W[warehouse001][destination002][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c357>: <W[warehouse001][destination002][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c358>: <W[warehouse001][destination002][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c359>: <W[warehouse001][destination002][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c360>: <W[warehouse001][destination003][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c361>: <W[warehouse001][destination003][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c362>: <W[warehouse001][destination003][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c363>: <W[warehouse001][destination003][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c364>: <W[warehouse001][destination003][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c365>: <W[warehouse001][destination003][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c366>: <W[warehouse001][destination003][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c367>: <W[warehouse001][destination003][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c368>: <W[warehouse001][destination004][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c369>: <W[warehouse001][destination004][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c370>: <W[warehouse001][destination004][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c371>: <W[warehouse001][destination004][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c372>: <W[warehouse001][destination004][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c373>: <W[warehouse001][destination004][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c374>: <W[warehouse001][destination004][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c375>: <W[warehouse001][destination004][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c376>: <W[warehouse001][destination005][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c377>: <W[warehouse001][destination005][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c378>: <W[warehouse001][destination005][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c379>: <W[warehouse001][destination005][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c380>: <W[warehouse001][destination005][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c381>: <W[warehouse001][destination005][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c382>: <W[warehouse001][destination005][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c383>: <W[warehouse001][destination005][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c384>: <W[warehouse001][destination006][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c385>: <W[warehouse001][destination006][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c386>: <W[warehouse001][destination006][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c387>: <W[warehouse001][destination006][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c388>: <W[warehouse001][destination006][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c389>: <W[warehouse001][destination006][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c390>: <W[warehouse001][destination006][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c391>: <W[warehouse001][destination006][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c392>: <W[warehouse001][destination007][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c393>: <W[warehouse001][destination007][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c394>: <W[warehouse001][destination007][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c395>: <W[warehouse001][destination007][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c396>: <W[warehouse001][destination007][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c397>: <W[warehouse001][destination007][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c398>: <W[warehouse001][destination007][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c399>: <W[warehouse001][destination007][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c400>: <W[warehouse001][destination008][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c401>: <W[warehouse001][destination008][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c402>: <W[warehouse001][destination008][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c403>: <W[warehouse001][destination008][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c404>: <W[warehouse001][destination008][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c405>: <W[warehouse001][destination008][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c406>: <W[warehouse001][destination008][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c407>: <W[warehouse001][destination008][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c408>: <W[warehouse002][destination001][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c409>: <W[warehouse002][destination001][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c410>: <W[warehouse002][destination001][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c411>: <W[warehouse002][destination001][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c412>: <W[warehouse002][destination001][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c413>: <W[warehouse002][destination001][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c414>: <W[warehouse002][destination001][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c415>: <W[warehouse002][destination001][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c416>: <W[warehouse002][destination002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c417>: <W[warehouse002][destination002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c418>: <W[warehouse002][destination002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c419>: <W[warehouse002][destination002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c420>: <W[warehouse002][destination002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c421>: <W[warehouse002][destination002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c422>: <W[warehouse002][destination002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c423>: <W[warehouse002][destination002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c424>: <W[warehouse002][destination003][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c425>: <W[warehouse002][destination003][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c426>: <W[warehouse002][destination003][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c427>: <W[warehouse002][destination003][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c428>: <W[warehouse002][destination003][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c429>: <W[warehouse002][destination003][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c430>: <W[warehouse002][destination003][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c431>: <W[warehouse002][destination003][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c432>: <W[warehouse002][destination004][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c433>: <W[warehouse002][destination004][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c434>: <W[warehouse002][destination004][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c435>: <W[warehouse002][destination004][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c436>: <W[warehouse002][destination004][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c437>: <W[warehouse002][destination004][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c438>: <W[warehouse002][destination004][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c439>: <W[warehouse002][destination004][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c440>: <W[warehouse002][destination005][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c441>: <W[warehouse002][destination005][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c442>: <W[warehouse002][destination005][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c443>: <W[warehouse002][destination005][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c444>: <W[warehouse002][destination005][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c445>: <W[warehouse002][destination005][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c446>: <W[warehouse002][destination005][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c447>: <W[warehouse002][destination005][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c448>: <W[warehouse002][destination006][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c449>: <W[warehouse002][destination006][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c450>: <W[warehouse002][destination006][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c451>: <W[warehouse002][destination006][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c452>: <W[warehouse002][destination006][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c453>: <W[warehouse002][destination006][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c454>: <W[warehouse002][destination006][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c455>: <W[warehouse002][destination006][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c456>: <W[warehouse002][destination007][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c457>: <W[warehouse002][destination007][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c458>: <W[warehouse002][destination007][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c459>: <W[warehouse002][destination007][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c460>: <W[warehouse002][destination007][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c461>: <W[warehouse002][destination007][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c462>: <W[warehouse002][destination007][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c463>: <W[warehouse002][destination007][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c464>: <W[warehouse002][destination008][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c465>: <W[warehouse002][destination008][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c466>: <W[warehouse002][destination008][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c467>: <W[warehouse002][destination008][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c468>: <W[warehouse002][destination008][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c469>: <W[warehouse002][destination008][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c470>: <W[warehouse002][destination008][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c471>: <W[warehouse002][destination008][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c472>: <S[warehouse001][item001][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c473>: <S[warehouse001][item001][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c474>: <S[warehouse001][item002][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c475>: <S[warehouse001][item002][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c476>: <S[warehouse001][item003][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c477>: <S[warehouse001][item003][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c478>: <S[warehouse001][item004][1]>[I] -9999999<Z[warehouse001][1]>[B] <= 0;
+  [linear] <c479>: <S[warehouse001][item004][2]>[I] -9999999<Z[warehouse001][2]>[B] <= 0;
+  [linear] <c480>: <S[warehouse002][item001][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c481>: <S[warehouse002][item001][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c482>: <S[warehouse002][item002][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c483>: <S[warehouse002][item002][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c484>: <S[warehouse002][item003][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c485>: <S[warehouse002][item003][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
+  [linear] <c486>: <S[warehouse002][item004][1]>[I] -9999999<Z[warehouse002][1]>[B] <= 0;
+  [linear] <c487>: <S[warehouse002][item004][2]>[I] -9999999<Z[warehouse002][2]>[B] <= 0;
 END

@@ -1,6 +1,6 @@
 SIMAN Run Controller.
 
-0.0069444444 Days>
+0.0 Days>
                                       ARENA Simulation Results
                                       matias - License: STUDENT
 
@@ -9,7 +9,7 @@ SIMAN Run Controller.
 Project: Unnamed Project                                             Run execution date :11/26/2020
 Analyst: kike garcia                                                 Model revision date:11/26/2020
 
-Replication ended at time      : 0.0069444444 Days 
+Replication ended at time      : 0.0 Days 
 Base Time Units: Days
 
                                            TALLY VARIABLES
@@ -36,7 +36,7 @@ Identifier                                  Average   Half Width  Minimum    Max
 ___________________________________________________________________________________________________
 
 Entity 1.WIP                                .00000     (Insuf)    .00000     .00000     .00000    
-VConfer.WIP                                 1.0000     (Insuf)    .00000     1.0000     1.0000    
+VConfer.WIP                                 .00000     (Insuf)    .00000     1.0000     1.0000    
 
                                              OUTPUTS
 
@@ -50,5 +50,5 @@ VConfer.NumberOut                           .00000
 System.NumberOut                            .00000    
 
 
-Simulation run time: 0.77 minutes.
+Simulation run time: 0.15 minutes.
 Simulation run complete.

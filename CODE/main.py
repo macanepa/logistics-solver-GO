@@ -2,7 +2,7 @@ import mcutils as mc
 import utilities
 
 mc.ColorSettings.print_color = True
-mc.ColorSettings.is_dev = False
+mc.ColorSettings.is_dev = True
 mc.LogSettings.display_logs = True
 utilities.initialize()
 
@@ -32,4 +32,5 @@ mc_main_menu = mc.Menu(title='Huit Consultora Solver',
                                 mf_read_manual, mf_about, mf_exit_application], back=False)
 
 while True:
+    #utilities.easter_egg()
     mc_main_menu.show()
