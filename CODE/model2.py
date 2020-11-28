@@ -6,17 +6,22 @@ import mcutils as mc
 
 class Model:
     model = pyscipopt.Model("Model_Team_8")
+    # model = Model(with_optimizer(SCIP.Optimizer), limits_gap=0.05)
     results = None
     data = None
     parameters = None
+    MAX_TIME = None
+    output_data = None
 
 def build_model(data, parameters):
     Model.model = pyscipopt.Model("Model_Team_8")
+    Model.model.setRealParam('limits/gap', 0.01)
     model = Model.model
     Model.data = data
     Model.parameters = parameters
     # Aux
-    MAX_TIME = 3
+    MAX_TIME = 120
+    Model.MAX_TIME = MAX_TIME
     big_m = 9999999
     parameters
 
@@ -27,8 +32,15 @@ def build_model(data, parameters):
     q_sjpt = {}  # Quantity arrived of containers of product p from supplier s to warehouse j in time t
     y_jt = {}  # 1 if warehouse j is open in time t else 0
     z_jt = {}  # 1 if warehouse j is operative in time t else 0
-    w_jkpt = {}  # Quantity transfered of product p from warehouse j to destination k in time t
+    w_jkpt = {}  # Quantity transferred of product p from warehouse j to destination k in time t
     s_jpt = {}  # Quantity of product p stored in warehouse j in time t
+
+    Model.results = {}
+    Model.results['x_sjpt'] = x_sjpt
+    Model.results['l_sjpt'] = l_sjpt
+    Model.results['w_jkpt'] = w_jkpt
+    Model.results['z_jt'] = z_jt
+    Model.results['s_jpt'] = s_jpt
 
     mc.mcprint(text='Constructing Variable Lsjpt: Quantity ordered of product p from supplier s to warehouse j in time t\n'
                     'Constructing Variable Xsjpt: Quantity arrived of product p from supplier s to warehouse j in time t\n'
@@ -109,13 +121,14 @@ def build_model(data, parameters):
     mc.mcprint(text='Constructing Constraints', color=mc.Color.GREEN)
 
     # Constraint: Demand
+    confidence_level = 0.95
     mc.mcprint(text="Constraint: Demand")
     for destination in data['destination']:
         for item in data['item']:
             for time in range(1, MAX_TIME):
                 model.addCons(pyscipopt.quicksum(
                     w_jkpt[warehouse, destination, item, time] for warehouse in data['warehouse']
-                    ) >= (parameters['D_kpt'][destination, item, f'{time}'] if (destination, item, f'{time}') in parameters['D_kpt'] else 0))
+                    ) >= (int(parameters['D_kpt'][destination, item, f'{time}']) * confidence_level if (destination, item, f'{time}') in parameters['D_kpt'] else 0))
 
     # Constraint: Lead time
     mc.mcprint(text="Constraint: Lead time")
@@ -132,9 +145,17 @@ def build_model(data, parameters):
     for warehouse in data['warehouse']:
         for item in data['item']:
             for time in range(1, MAX_TIME):
+                storage_pre = 0
+                storage_post = 0
+                if (warehouse, item, time - 1) in s_jpt:
+                    storage_pre = s_jpt[warehouse, item, time - 1]
+                if (warehouse, item, time) in s_jpt:
+                    storage_post = s_jpt[warehouse, item, time]
                 model.addCons(
                     pyscipopt.quicksum(x_sjpt[supplier, warehouse, item, time] for supplier in data['supplier'])
+                    + storage_pre
                     == pyscipopt.quicksum(w_jkpt[warehouse, destination, item, time] for destination in data['destination'])
+                    + storage_post
                     )
 
     # Constraint: Truck capacity
@@ -215,17 +236,11 @@ def display_optimal_information():
             print(text)
         if model.getStatus() == "optimal":
             mc.mcprint(text="Found the optimal solution successfully", color=mc.Color.GREEN)
+        if model.getStatus() == "gaplimit":
+            mc.mcprint(text="Found the optimal solution successfully (gap limit of 1% has been reached)", color=mc.Color.GREEN)
     else:
         mc.mcprint(text="The instance is INFEASIBLE", color=mc.Color.RED)
 
-    X = []
-    for var in list(filter(lambda x: x.name[0] == 'X', model.getVars())):
-        value = int(model.getVal(var))
-        if value != 0:
-            X.append("{}:\t{}".format(value, var))
-    sort = sorted(X, key=sort_key_export)
-    for text in sort:
-        print(text)
 
 
 def reset_model():

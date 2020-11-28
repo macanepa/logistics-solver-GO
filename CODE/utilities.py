@@ -92,6 +92,7 @@ def import_data():
             first_line = True
             headers = []
             for line in file:
+                line = line.replace(',', ';')
                 if line.strip() == "":
                     continue
                 if first_line:
@@ -140,6 +141,7 @@ def import_data():
             for line in file:
                 if line.strip() == "":
                     continue
+                line = line.replace(',', ';')
                 if first_line:
                     if file_name in exclude:
                         headers = line.strip().split(";")
@@ -223,6 +225,35 @@ def create_parameters():
         for destination in Data.INPUT_DATA['destination']:
             LT2_sj[(warehouse, destination)] = int(Data.INPUT_DATA['leg2_delay'][f'{warehouse}_{destination}']['time_months'])
 
+    # Generating: Variable Cost Leg 1
+    mc.mcprint(text="Generating: Variable Cost Leg 1")
+    CL1_sj = {}
+    for supplier in Data.INPUT_DATA['supplier']:
+        for warehouse in Data.INPUT_DATA['warehouse']:
+            CL1_sj[(supplier, warehouse)] = int(Data.INPUT_DATA['leg1_cost'][f'{supplier}_{warehouse}']['cost'])
+
+    # Generating: Variable Cost Leg 2
+    mc.mcprint(text="Generating: Variable Cost Leg 2")
+    CL2_sj = {}
+    for warehouse in Data.INPUT_DATA['warehouse']:
+        for destination in Data.INPUT_DATA['destination']:
+            CL2_sj[(warehouse, destination)] = int(Data.INPUT_DATA['leg2_cost'][f'{warehouse}_{destination}']['cost'])
+
+    # Generating: Manufacturing Costs
+    mc.mcprint(text="Generating: Manufacturing Costs")
+    MC_sp = {}
+    for supplier in Data.INPUT_DATA['supplier']:
+        for item in Data.INPUT_DATA['item']:
+            MC_sp[(supplier, item)] = int(Data.INPUT_DATA['manufacture_cost'][supplier][item])
+
+    # Generating: Storage Costs
+    mc.mcprint(text="Generating: Storage Costs")
+    STO_jp = {}
+    for warehouse in Data.INPUT_DATA['warehouse']:
+        for item in Data.INPUT_DATA['item']:
+            STO_jp[(warehouse, item)] = int(Data.INPUT_DATA['warehouse'][warehouse][item])
+
+
 
     # Fixed Variables
     # Generating: y_jt
@@ -238,6 +269,10 @@ def create_parameters():
         'SC_sp':   SC_sp,
         'LT1_sj':  LT1_sj,
         'LT2_sj':  LT2_sj,
+        'CL1_sj':  CL1_sj,
+        'CL2_sj':  CL2_sj,
+        'MC_sp':  MC_sp,
+        'STO_jp':  STO_jp,
 
 
         # Fixed Variables
@@ -300,23 +335,42 @@ def open_simulation():
 
 
 def save_output():
-    if model2.Model.model.getStatus() != 'optimal':
+    if model2.Model.model.getStatus() not in ['optimal', 'gaplimit']:
         return
 
     output_file_name = 'solver_output.xls'
     mc.mcprint(text=f'Attempting to save {output_file_name}',
                color=mc.Color.YELLOW)
     wb = xlwt.Workbook()
-    ws = wb.add_sheet('sheet1')
 
-    ws.write(0, 1, 'Demanda')
-    ws.write(1, 0, 'c1')
-    ws.write(2, 0, 'c2')
+    Model = model2.Model
+    l_sjpt = Model.results['l_sjpt']
+    w_jkpt = Model.results['w_jkpt']
+    for item in Model.data['item']:
+        ws = wb.add_sheet(item)
 
-    ws.write(1, 1, 350)
-    ws.write(2, 1, 250)
+        ws.write(0, 0, 'periodo')
+        ws.write(0, 1, 'supplier001C')
+        ws.write(0, 2, 'supplier002C')
+        ws.write(0, 3, 'supplier003C')
+        ws.write(0, 4, 'supplier004C')
 
-    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'solver_output.xls')
+        ws.write(0, 5, 'supplier001L')
+        ws.write(0, 6, 'supplier002L')
+        ws.write(0, 7, 'supplier003L')
+        ws.write(0, 8, 'supplier004L')
+
+        for period in range(1, Model.MAX_TIME + 2):
+            ws.write(period, 0, period - 2)
+
+        for s_index, supplier in enumerate(Model.data['supplier']):
+            for w_index, warehouse in enumerate(Model.data['warehouse']):
+                # item = 'item001'
+                for time in range(1, Model.MAX_TIME):
+                    value = Model.model.getVal(l_sjpt[(supplier, warehouse, item, time - 2)])
+                    ws.write(time, s_index + 1 + (4 * w_index), value)
+
+    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], output_file_name)
     try:
         wb.save(path)
         mc.mcprint(text=f'{output_file_name} saved successfully',
@@ -324,6 +378,122 @@ def save_output():
     except PermissionError:
         mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
         return
+
+    output_file_name = 'solver_output_leg2.xls'
+    mc.mcprint(text=f'Attempting to save {output_file_name}',
+               color=mc.Color.YELLOW)
+    wb = xlwt.Workbook()
+
+    Model = model2.Model
+    l_sjpt = Model.results['l_sjpt']
+    for item in Model.data['item']:
+        ws = wb.add_sheet(item)
+
+        ws.write(0, 0, 'periodo')
+        ws.write(0, 1, 'destination001C')
+        ws.write(0, 2, 'destination002C')
+        ws.write(0, 3, 'destination003C')
+        ws.write(0, 4, 'destination004C')
+        ws.write(0, 5, 'destination005C')
+        ws.write(0, 6, 'destination006C')
+        ws.write(0, 7, 'destination007C')
+        ws.write(0, 8, 'destination008C')
+
+        ws.write(0,  9, 'destination001C')
+        ws.write(0, 10, 'destination002C')
+        ws.write(0, 11, 'destination003C')
+        ws.write(0, 12, 'destination004C')
+        ws.write(0, 13, 'destination005C')
+        ws.write(0, 14, 'destination006C')
+        ws.write(0, 15, 'destination007C')
+        ws.write(0, 16, 'destination008C')
+
+
+        for period in range(1, Model.MAX_TIME):
+            ws.write(period, 0, period)
+
+        for w_index, warehouse in enumerate(Model.data['warehouse']):
+            for d_index, destination in enumerate(Model.data['destination']):
+                for time in range(1, Model.MAX_TIME):
+                    value = Model.model.getVal(w_jkpt[(warehouse, destination, item, time)])
+                    ws.write(time, d_index + 1 + (8 * w_index), value)
+
+    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], output_file_name)
+    try:
+        wb.save(path)
+        mc.mcprint(text=f'{output_file_name} saved successfully',
+                   color=mc.Color.GREEN)
+    except PermissionError:
+        mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
+        return
+
+
+
+    output_file_name = 'solver_output_warehouse.xls'
+    mc.mcprint(text=f'Attempting to save {output_file_name}',
+               color=mc.Color.YELLOW)
+    wb = xlwt.Workbook()
+
+    Model = model2.Model
+    z_jt = Model.results['z_jt']
+    for warehouse in Model.data['warehouse']:
+        ws = wb.add_sheet(warehouse)
+
+        ws.write(0, 0, 'periodo')
+        ws.write(0, 1, 'is open?')
+
+        for period in range(1, Model.MAX_TIME):
+            ws.write(period, 0, period)
+
+        for time in range(1, Model.MAX_TIME):
+            value = Model.model.getVal(z_jt[(warehouse, time)])
+            ws.write(time, 1, value)
+
+    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], output_file_name)
+    try:
+        wb.save(path)
+        mc.mcprint(text=f'{output_file_name} saved successfully',
+                   color=mc.Color.GREEN)
+    except PermissionError:
+        mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
+        return
+
+
+
+
+    output_file_name = 'solver_output_warehouse.xls'
+    mc.mcprint(text=f'Attempting to save {output_file_name}',
+               color=mc.Color.YELLOW)
+    wb = xlwt.Workbook()
+
+    Model = model2.Model
+    s_jpt = Model.results['s_jpt']
+    for warehouse in Model.data['warehouse']:
+        ws = wb.add_sheet(warehouse)
+
+        ws.write(0, 0, 'periodo')
+        ws.write(0, 1, 'item001')
+        ws.write(0, 2, 'item002')
+        ws.write(0, 3, 'item003')
+        ws.write(0, 4, 'item004')
+
+        for period in range(1, Model.MAX_TIME):
+            ws.write(period, 0, period)
+
+        for time in range(1, Model.MAX_TIME):
+            for i_index, item in enumerate(Model.data['item']):
+                value = Model.model.getVal(s_jpt[(warehouse, item, time)])
+                ws.write(time, i_index + 1, value)
+
+    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], output_file_name)
+    try:
+        wb.save(path)
+        mc.mcprint(text=f'{output_file_name} saved successfully',
+                   color=mc.Color.GREEN)
+    except PermissionError:
+        mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
+        return
+
 
     mf_open_simulation = mc.MenuFunction(title='Yes', function=open_simulation)
     simulation_menu = mc.Menu(title=f'Would you like to open a simulation with the results?\n'
