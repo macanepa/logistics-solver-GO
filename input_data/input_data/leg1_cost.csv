@@ -1,9 +1,9 @@
 supplier_id_warehouse_id;cost
-supplier001_warehouse001;2
-supplier002_warehouse001;2
-supplier003_warehouse001;2
-supplier004_warehouse001;2
-supplier001_warehouse002;2
-supplier002_warehouse002;2
-supplier003_warehouse002;2
-supplier004_warehouse002;2
+supplier001_warehouse001;0.40
+supplier002_warehouse001;0.4839
+supplier003_warehouse001;0.456
+supplier004_warehouse001;0.46
+supplier001_warehouse002;0.45
+supplier002_warehouse002;0.4839
+supplier003_warehouse002;0.48
+supplier004_warehouse002;0.46

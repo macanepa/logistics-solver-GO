@@ -230,14 +230,14 @@ def create_parameters():
     CL1_sj = {}
     for supplier in Data.INPUT_DATA['supplier']:
         for warehouse in Data.INPUT_DATA['warehouse']:
-            CL1_sj[(supplier, warehouse)] = int(Data.INPUT_DATA['leg1_cost'][f'{supplier}_{warehouse}']['cost'])
+            CL1_sj[(supplier, warehouse)] = float(Data.INPUT_DATA['leg1_cost'][f'{supplier}_{warehouse}']['cost'])
 
     # Generating: Variable Cost Leg 2
     mc.mcprint(text="Generating: Variable Cost Leg 2")
     CL2_sj = {}
     for warehouse in Data.INPUT_DATA['warehouse']:
         for destination in Data.INPUT_DATA['destination']:
-            CL2_sj[(warehouse, destination)] = int(Data.INPUT_DATA['leg2_cost'][f'{warehouse}_{destination}']['cost'])
+            CL2_sj[(warehouse, destination)] = float(Data.INPUT_DATA['leg2_cost'][f'{warehouse}_{destination}']['cost'])
 
     # Generating: Manufacturing Costs
     mc.mcprint(text="Generating: Manufacturing Costs")

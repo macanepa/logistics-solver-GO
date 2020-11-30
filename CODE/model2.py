@@ -232,8 +232,8 @@ def display_optimal_information():
             if value != 0:
                 printable_list.append("{}:\t{}".format(value, var))
         sort = sorted(printable_list, key=sort_key)
-        for text in sort:
-            print(text)
+        # for text in sort:
+        #     print(text)
         if model.getStatus() == "optimal":
             mc.mcprint(text="Found the optimal solution successfully", color=mc.Color.GREEN)
         if model.getStatus() == "gaplimit":

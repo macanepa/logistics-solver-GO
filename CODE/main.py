@@ -2,7 +2,7 @@ import mcutils as mc
 import utilities
 
 mc.ColorSettings.print_color = True
-mc.ColorSettings.is_dev = True
+mc.ColorSettings.is_dev = False
 mc.LogSettings.display_logs = True
 utilities.initialize()
 
