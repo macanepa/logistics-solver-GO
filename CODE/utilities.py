@@ -375,6 +375,8 @@ def save_output():
         wb.save(path)
         mc.mcprint(text=f'{output_file_name} saved successfully',
                    color=mc.Color.GREEN)
+        mc.mcprint(text=f'path={path}\n',
+                   color=mc.Color.YELLOW)
     except PermissionError:
         mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
         return
@@ -432,6 +434,8 @@ def save_output():
     output_file_name = 'solver_output_warehouse.xls'
     mc.mcprint(text=f'Attempting to save {output_file_name}',
                color=mc.Color.YELLOW)
+    mc.mcprint(text=f'path={path}\n',
+               color=mc.Color.YELLOW)
     wb = xlwt.Workbook()
 
     Model = model2.Model
@@ -461,8 +465,10 @@ def save_output():
 
 
 
-    output_file_name = 'solver_output_warehouse.xls'
+    output_file_name = 'solver_output_warehouse_stock.xls'
     mc.mcprint(text=f'Attempting to save {output_file_name}',
+               color=mc.Color.YELLOW)
+    mc.mcprint(text=f'path={path}\n',
                color=mc.Color.YELLOW)
     wb = xlwt.Workbook()
 
@@ -490,11 +496,14 @@ def save_output():
         wb.save(path)
         mc.mcprint(text=f'{output_file_name} saved successfully',
                    color=mc.Color.GREEN)
+        mc.mcprint(text=f'path={path}\n',
+                   color=mc.Color.YELLOW)
     except PermissionError:
         mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
         return
 
-
+    mc.mcprint(text="\n\n\n\nTo see the solution in excel files, head to the specified paths above",
+               color=mc.Color.RED)
     mf_open_simulation = mc.MenuFunction(title='Yes', function=open_simulation)
     simulation_menu = mc.Menu(title=f'Would you like to open a simulation with the results?\n'
                                     f'{mc.Color.RED}    Wait for the splash screen to vanish{mc.Color.RESET}',

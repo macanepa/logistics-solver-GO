@@ -238,6 +238,7 @@ def display_optimal_information():
             mc.mcprint(text="Found the optimal solution successfully", color=mc.Color.GREEN)
         if model.getStatus() == "gaplimit":
             mc.mcprint(text="Found the optimal solution successfully (gap limit of 1% has been reached)", color=mc.Color.GREEN)
+
     else:
         mc.mcprint(text="The instance is INFEASIBLE", color=mc.Color.RED)
 
