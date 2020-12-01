@@ -1,3 +1,3 @@
-id;name
-warehouse001;london
-warehouse002;nani
+id;name;item001;item002;item003;item004
+warehouse001;london;10;10;10;10
+warehouse002;central;10;10;10;10
