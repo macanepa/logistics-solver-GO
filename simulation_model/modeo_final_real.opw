@@ -1,0 +1,82 @@
+[RESOURCES]
+[VARIABLES]
+s.c_rome.NumberOut Orig
+s.l_rome.NumberOut Orig
+d_wcp
+d_wcr
+d_wcs
+d_wcl
+d_wcm
+d_wch
+s.c_stockholm.NumberOut Dup
+s.l_stockholm.NumberOut Dup
+d_wck
+d_wca
+s.india_c.NumberOut Orig
+s.india_l.NumberOut Orig
+s.c_stockholm.NumberOut Orig
+s.l_stockholm.NumberOut Orig
+s.india_c.NumberOut Dup
+s.india_l.NumberOut Dup
+d_wla
+Dispose 10.NumberOut
+d_wlh
+d_wlk
+d_wlm
+d_wll
+d_wlp
+d_wls
+d_wlr
+s.c_paris.NumberOut Dup
+s.l_paris.NumberOut Dup
+s.c_paris.NumberOut Orig
+s.l_paris.NumberOut Orig
+s.c_helsinki.NumberOut Orig
+s.l_helsinki.NumberOut Orig
+s.c_helsinki.NumberOut Dup
+s.l_helsinki.NumberOut Dup
+t_period
+s.c_london.NumberOut Orig
+s.l_london.NumberOut Orig
+Create 3.NumberOut
+Create 1.NumberOut
+Separate 1.NumberOut Orig
+Dispose 1.NumberOut
+Dispose 8.NumberOut
+d_china_l
+d_china_c
+s.malasia_c.NumberOut Dup
+s.malasia_l.NumberOut Dup
+s.c_london.NumberOut Dup
+s.l_london.NumberOut Dup
+s.malasia_c.NumberOut Orig
+s.malasia_l.NumberOut Orig
+s.c_kiev.NumberOut Dup
+s.l_kiev.NumberOut Dup
+s.tailand_c.NumberOut Dup
+s.tailand_l.NumberOut Dup
+s.c_kiev.NumberOut Orig
+s.l_kiev.NumberOut Orig
+s.tailand_c.NumberOut Orig
+s.tailand_l.NumberOut Orig
+s.c_moscow.NumberOut Dup
+s.l_moscow.NumberOut Dup
+Separate 1.NumberOut Dup
+d_malasia_c
+d_malasia_l
+s.china_c.NumberOut Dup
+s.china_l.NumberOut Dup
+s.china_c.NumberOut Orig
+s.china_l.NumberOut Orig
+s.c_amsterdam.NumberOut Dup
+s.l_amsterdam.NumberOut Dup
+s.c_moscow.NumberOut Orig
+s.l_moscow.NumberOut Orig
+d_india_c
+d_india_l
+s.c_amsterdam.NumberOut Orig
+s.l_amsterdam.NumberOut Orig
+d_tailandia_c
+d_tailandia_l
+s.c_rome.NumberOut Dup
+s.l_rome.NumberOut Dup

@@ -41,6 +41,7 @@ def build_model(data, parameters):
     Model.results['w_jkpt'] = w_jkpt
     Model.results['z_jt'] = z_jt
     Model.results['s_jpt'] = s_jpt
+    Model.results['q_sjpt'] = q_sjpt
 
     mc.mcprint(text='Constructing Variable Lsjpt: Quantity ordered of product p from supplier s to warehouse j in time t\n'
                     'Constructing Variable Xsjpt: Quantity arrived of product p from supplier s to warehouse j in time t\n'

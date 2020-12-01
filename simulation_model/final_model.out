@@ -1,0 +1,47 @@
+
+                                      ARENA Simulation Results
+                                      matias - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date :11/30/2020
+Analyst: matias                                                      Model revision date:11/30/2020
+
+Replication ended at time      : 0.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                             .00000     (Insuf)    .00000     .00000          1    
+Entity 1.NVATime                            .00000     (Insuf)    .00000     .00000          1    
+Entity 1.WaitTime                           .00000     (Insuf)    .00000     .00000          1    
+Entity 1.TranTime                           .00000     (Insuf)    .00000     .00000          1    
+Entity 1.OtherTime                          .00000     (Insuf)    .00000     .00000          1    
+Entity 1.TotalTime                          .00000     (Insuf)    .00000     .00000          1    
+Hold 2.Queue.WaitingTime                        --         --         --         --          0
+Hold 1.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000          1    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                .00000     (Insuf)    .00000     2.0000     1.0000    
+Hold 2.Queue.NumberInQueue                  .00000     (Insuf)    .00000     1.0000     1.0000    
+Hold 1.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           2.0000    
+Entity 1.NumberOut                          1.0000    
+System.NumberOut                            1.0000    
+
+
+Simulation run time: 0.02 minutes.
+Simulation run complete.

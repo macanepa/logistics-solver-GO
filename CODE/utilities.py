@@ -328,7 +328,7 @@ def import_input_data(select_new_folder=False):
 
 def open_simulation():
     simulation_folder_path = ConfigFiles.FIXED_DIRECTORIES['simulation_model']
-    simulation_file_path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'Modelo Final.doe')
+    simulation_file_path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], 'modeo_final_real.doe')
     mc.mcprint(text="Creating Simulation",
                color=mc.Color.PINK)
     mc.DirectoryManager.open_file(mc.DirectoryManager([simulation_folder_path]), simulation_file_path)
@@ -490,6 +490,49 @@ def save_output():
             for i_index, item in enumerate(Model.data['item']):
                 value = Model.model.getVal(s_jpt[(warehouse, item, time)])
                 ws.write(time, i_index + 1, value)
+
+    path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], output_file_name)
+    try:
+        wb.save(path)
+        mc.mcprint(text=f'{output_file_name} saved successfully',
+                   color=mc.Color.GREEN)
+        mc.mcprint(text=f'path={path}\n',
+                   color=mc.Color.YELLOW)
+    except PermissionError:
+        mc.register_error(error_string=f'The file {path} is currently being used. Please close the file and try again)')
+        return
+
+    output_file_name = 'solver_output_containers.xls'
+    mc.mcprint(text=f'Attempting to save {output_file_name}',
+               color=mc.Color.YELLOW)
+    wb = xlwt.Workbook()
+
+    Model = model2.Model
+    q_sjpt = Model.results['q_sjpt']
+    w_jkpt = Model.results['w_jkpt']
+    for item in Model.data['item']:
+        ws = wb.add_sheet(item)
+
+        ws.write(0, 0, 'periodo')
+        ws.write(0, 1, 'supplier001C')
+        ws.write(0, 2, 'supplier002C')
+        ws.write(0, 3, 'supplier003C')
+        ws.write(0, 4, 'supplier004C')
+
+        ws.write(0, 5, 'supplier001L')
+        ws.write(0, 6, 'supplier002L')
+        ws.write(0, 7, 'supplier003L')
+        ws.write(0, 8, 'supplier004L')
+
+        for period in range(1, Model.MAX_TIME):
+            ws.write(period, 0, period)
+
+        for s_index, supplier in enumerate(Model.data['supplier']):
+            for w_index, warehouse in enumerate(Model.data['warehouse']):
+                # item = 'item001'
+                for time in range(1, Model.MAX_TIME):
+                    value = Model.model.getVal(q_sjpt[(supplier, warehouse, item, time)])
+                    ws.write(time, s_index + 1 + (4 * w_index), value)
 
     path = os.path.join(ConfigFiles.FIXED_DIRECTORIES['simulation_model'], output_file_name)
     try:

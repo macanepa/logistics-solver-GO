@@ -2,16 +2,16 @@ SIMAN Run Controller.
 
 0.0 Hours>SIMAN Run Controller.
 
-1.2624584 Hours>
+822.81446 Hours>
                                       ARENA Simulation Results
                                       matias - License: STUDENT
 
                                   Summary for Replication 1 of 1
 
-Project: Unnamed Project                                             Run execution date :11/23/2020
-Analyst: matias                                                      Model revision date:11/23/2020
+Project: Unnamed Project                                             Run execution date :11/30/2020
+Analyst: matias                                                      Model revision date:11/30/2020
 
-Replication ended at time      : 1.2624584 Hours 
+Replication ended at time      : 822.81446 Hours (Thursday, February 05, 2009, 03:57:31)
 Base Time Units: Hours
 
                                            TALLY VARIABLES
@@ -19,29 +19,33 @@ Base Time Units: Hours
 Identifier                                  Average   Half Width  Minimum    Maximum   Observations
 ___________________________________________________________________________________________________
 
-Entity 1.VATime                             .00000     (Insuf)    .00000     .00000          1    
-Entity 1.NVATime                            .00000     (Insuf)    .00000     .00000          1    
-Entity 1.WaitTime                           .00000     (Insuf)    .00000     .00000          1    
-Entity 1.TranTime                           1.0000     (Insuf)    1.0000     1.0000          1    
-Entity 1.OtherTime                          .00000     (Insuf)    .00000     .00000          1    
-Entity 1.TotalTime                          1.0000     (Insuf)    1.0000     1.0000          1    
+Entity 1.VATime                             .00000     (Insuf)    .00000     .00000         32    
+Entity 1.NVATime                            .00000     (Insuf)    .00000     .00000         32    
+Entity 1.WaitTime                           .00000     (Insuf)    .00000     .00000         32    
+Entity 1.TranTime                           .00000     (Insuf)    .00000     .00000         32    
+Entity 1.OtherTime                          .00000     (Insuf)    .00000     .00000         32    
+Entity 1.TotalTime                          .00000     (Insuf)    .00000     .00000         32    
+Hold 4.Queue.WaitingTime                    816.04     (Insuf)    816.04     816.04          1    
+Hold 2.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000          1    
 
                                      DISCRETE-CHANGE VARIABLES
 
 Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
 ___________________________________________________________________________________________________
 
-Entity 1.WIP                                2.1615     (Insuf)    .00000     4.0000     4.0000    
+Entity 1.WIP                                1.0000     (Insuf)    .00000     7.0000     1.0000    
+Hold 4.Queue.NumberInQueue                  .99177     (Insuf)    .00000     1.0000     .00000    
+Hold 2.Queue.NumberInQueue                  .00823     (Insuf)    .00000     1.0000     1.0000    
 
                                              OUTPUTS
 
 Identifier                                   Value
 _____________________________________________________________
 
-Entity 1.NumberIn                           5.0000    
-Entity 1.NumberOut                          1.0000    
-System.NumberOut                            1.0000    
+Entity 1.NumberIn                           33.000    
+Entity 1.NumberOut                          32.000    
+System.NumberOut                            32.000    
 
 
-Simulation run time: 0.27 minutes.
+Simulation run time: 0.70 minutes.
 Simulation run complete.

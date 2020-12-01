@@ -1,0 +1,54 @@
+SIMAN Run Controller.
+
+0.00017314815 Days>
+                                      ARENA Simulation Results
+                                      matias - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date :11/30/2020
+Analyst: kike garcia                                                 Model revision date:11/30/2020
+
+Replication ended at time      : 0.00017314815 Days (Thursday, January 01, 2009, 12:33:40)
+Base Time Units: Days
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                                 --         --         --         --          0
+Entity 1.NVATime                                --         --         --         --          0
+Entity 1.WaitTime                               --         --         --         --          0
+Entity 1.TranTime                               --         --         --         --          0
+Entity 1.OtherTime                              --         --         --         --          0
+Entity 1.TotalTime                              --         --         --         --          0
+VConfer.VATime                              .00000     .00000     .00000     .00000       1376    
+VConfer.NVATime                             .00000     .00000     .00000     .00000       1376    
+VConfer.WaitTime                            .00000     .00000     .00000     .00000       1376    
+VConfer.TranTime                            .00000     .00000     .00000     .00000       1376    
+VConfer.OtherTime                           .00000     .00000     .00000     .00000       1376    
+VConfer.TotalTime                           .00000     .00000     .00000     .00000       1376    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                .00000     (Insuf)    .00000     .00000     .00000    
+VConfer.WIP                                 115.22     (Insuf)    .00000     121.00     120.00    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           .00000    
+Entity 1.NumberOut                          .00000    
+VConfer.NumberIn                            1496.0    
+VConfer.NumberOut                           1376.0    
+System.NumberOut                            1376.0    
+
+
+Simulation run time: 0.93 minutes.
+Simulation run complete.

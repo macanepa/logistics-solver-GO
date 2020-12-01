@@ -9,5 +9,5 @@ MaxScanRows=8
 MaxBufferSize=2048
 FIL=MS Access
 DriverId=281
-DefaultDir=C:\Users\matias\PycharmProjects\logistics-solver-GO\simulation_model
-DBQ=C:\Users\matias\PycharmProjects\logistics-solver-GO\simulation_model\Model1.accdb
+DefaultDir=C:\Users\matias\Desktop\final
+DBQ=C:\Users\matias\Desktop\final\Model1.accdb

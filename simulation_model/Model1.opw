@@ -1,4 +1,33 @@
 [RESOURCES]
 [VARIABLES]
+s.india_l.NumberOut Orig
+s.india_c.NumberOut Orig
+s.india_l.NumberOut Dup
+s.india_c.NumberOut Dup
+Create 2.NumberOut
 Create 1.NumberOut
+Separate 1.NumberOut Orig
 Dispose 1.NumberOut
+Dispose 4.NumberOut
+d_china_l
+d_china_c
+s.malasia_l.NumberOut Dup
+s.malasia_c.NumberOut Dup
+s.malasia_l.NumberOut Orig
+s.malasia_c.NumberOut Orig
+s.tailand_l.NumberOut Dup
+s.tailand_c.NumberOut Dup
+s.tailand_l.NumberOut Orig
+s.tailand_c.NumberOut Orig
+Dispose 3.NumberOut
+Separate 1.NumberOut Dup
+d_malasia_c
+d_malasia_l
+s.china_l.NumberOut Dup
+s.china_c.NumberOut Dup
+s.china_l.NumberOut Orig
+s.china_c.NumberOut Orig
+d_india_c
+d_india_l
+d_tailandia_c
+d_tailandia_l

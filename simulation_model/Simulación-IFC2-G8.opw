@@ -1,0 +1,86 @@
+[RESOURCES]
+[VARIABLES]
+alm VConfer London
+Producto 2 malasia
+costototalAlmacenamiento
+ventas
+Fabricación.NumberOut
+Cargando camiones con X cant producto.NumberIn
+quiero almacenar?.NumberOut True
+Cargando camiones con X cant producto.NumberOut
+total Producto
+ubicaion warehouse 1 o 2.NumberOut True
+CantWLondonStock2
+Producto tailandia
+CantidadProducto2Malasia
+Cant Helsinki desde W Eu
+CantWEuropaParis2
+CantWLondonParis2
+costoTotalLeg2
+costoTotalleg1
+CantWLondonLondon2
+CantWLondonLondon
+CostoAlmacenamiento
+CantWEuropaHelsinki2
+CantWLondonRome2
+CantWLondonAmst2
+CantWLondonRome
+CantWLondonAmst
+Producto china
+CantWEuropaKiev2
+CantWEuropaKiev
+alm Producto London
+costotransporteLeg2
+CantWEuropaStock2
+Producto india
+alm Producto
+Dispose 18.NumberOut
+CantWLondonHelsinki
+london Cant Ams
+CantWLondonStock
+CantWEuropaMoscow2
+CantWEuropaMoscow
+total london Producto
+CantWLondonHelsinki2
+CantWLondonMoscow2
+CantWLondonMoscow
+Dispose 1.NumberOut
+cuánto se va almacenar en london??.NumberOut True
+CostoProduccion
+Producto bodega
+CantWEuropaHelsinki
+Producto bodega london
+Producto malasia
+CantidadProductoIndia
+CantWEuropaStock
+quiero almacenar?.NumberOut False
+CantidadProductoChina
+CostoProductox
+CantWLondonKiev2
+CantWLondonKiev
+Producto 2 tailandia
+CantidadProductoMalasia
+Dispose 13.NumberOut
+alm VConfer
+CantWLondonParis
+Create 14.NumberOut
+CantidadProductoTailandia
+Dispose 16.NumberOut
+CantidadProducto2Tailandia
+Warehouse Europa central.NumberOut
+Producto 2 china
+costoFijo
+CantidadProducto2China
+ubicaion warehouse 1 o 2.NumberOut False
+Producto 2 india
+Dispose 17.NumberOut
+CantWEuropaParis
+CantWEuropaAmst2
+CantWEuropaAmst
+CantidadProducto2India
+cuánto se va almacenar en london??.NumberOut False
+CostoTransporte
+CantWEuropaLondon2
+CantWEuropaLondon
+CantWEuropaRome2
+CantWEuropaRome

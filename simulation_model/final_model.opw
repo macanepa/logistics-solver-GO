@@ -1,0 +1,6 @@
+[RESOURCES]
+[VARIABLES]
+Create 1.NumberOut
+Separate 1.NumberOut Orig
+Dispose 1.NumberOut
+Separate 1.NumberOut Dup
