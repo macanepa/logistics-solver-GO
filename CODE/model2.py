@@ -33,6 +33,7 @@ def build_model(data, parameters):
     y_jt = {}  # 1 if warehouse j is open in time t else 0
     z_jt = {}  # 1 if warehouse j is operative in time t else 0
     w_jkpt = {}  # Quantity transferred of product p from warehouse j to destination k in time t
+    o_jkpt = {}  # Quantity transferred of of containers of product p from warehouse j to destination k in time t
     s_jpt = {}  # Quantity of product p stored in warehouse j in time t
 
     Model.results = {}
@@ -42,6 +43,7 @@ def build_model(data, parameters):
     Model.results['z_jt'] = z_jt
     Model.results['s_jpt'] = s_jpt
     Model.results['q_sjpt'] = q_sjpt
+    Model.results['o_jkpt'] = o_jkpt
 
     mc.mcprint(text='Constructing Variable Lsjpt: Quantity ordered of product p from supplier s to warehouse j in time t\n'
                     'Constructing Variable Xsjpt: Quantity arrived of product p from supplier s to warehouse j in time t\n'
@@ -88,6 +90,11 @@ def build_model(data, parameters):
                                                                                 ub=None,
                                                                                 name=variable_name,
                                                                                 vtype="INTEGER")
+                    variable_name = f'O[{warehouse}][{destination}][{item}][{time}]'
+                    o_jkpt[(warehouse, destination, item, time)] = model.addVar(lb=0,
+                                                                                ub=None,
+                                                                                name=variable_name,
+                                                                                vtype="INTEGER")
 
     mc.mcprint(text='Constructing Variable Sjpt: Quantity of product p stored in warehouse j in time t')
     for warehouse in data['warehouse']:
@@ -112,8 +119,60 @@ def build_model(data, parameters):
                  for supplier in data['supplier']
                  for warehouse in data['warehouse']
                  for item in data['item']
-                 for time in range(1, MAX_TIME))
-        )))
+                 for time in range(1, MAX_TIME)))
+
+            + pyscipopt.quicksum(
+                (l_sjpt[supplier, warehouse, item, time]*parameters['MC_sp'][(supplier, item)]
+                 for supplier in data['supplier']
+                 for warehouse in data['warehouse']
+                 for item in data['item']
+                 for time in range(-1, MAX_TIME - 2)))
+
+            + pyscipopt.quicksum(
+                (y_jt['warehouse002', time]*40000
+                 for time in range(1, MAX_TIME)))
+
+            + pyscipopt.quicksum(
+                (z_jt['warehouse002', time]*40000
+                 for time in range(1, MAX_TIME)))
+            + pyscipopt.quicksum(
+                (z_jt['warehouse001', time]*50000
+                 for time in range(1, MAX_TIME)))
+
+            + pyscipopt.quicksum(
+                (s_jpt[warehouse, item, time] * parameters['STO_jp'][(warehouse, item)]
+                 for warehouse in data['warehouse']
+                 for item in data['item']
+                 for time in range(1, MAX_TIME)))
+            #
+            # + pyscipopt.quicksum(
+            #     (l_sjpt[supplier, warehouse, item, time] * parameters['CL1_sj'][(supplier, warehouse)]
+            #      for supplier in data['supplier']
+            #      for warehouse in data['warehouse']
+            #      for item in data['item']
+            #      for time in range(1, MAX_TIME)))
+            # + pyscipopt.quicksum(
+            #     (q_sjpt[supplier, warehouse, item, time] * 5000
+            #      for supplier in data['supplier']
+            #      for warehouse in data['warehouse']
+            #      for item in data['item']
+            #      for time in range(1, MAX_TIME)))
+
+            + pyscipopt.quicksum(
+                (w_jkpt[warehouse, destination, item, time] * parameters['CL2_sj'][(warehouse, destination)]
+                 for warehouse in data['warehouse']
+                 for destination in data['destination']
+                 for item in data['item']
+                 for time in range(1, MAX_TIME)))
+            + pyscipopt.quicksum(
+                (o_jkpt[warehouse, destination, item, time] * 5000
+                 for warehouse in data['warehouse']
+                 for destination in data['destination']
+                 for item in data['item']
+                 for time in range(1, MAX_TIME)))
+
+    ))
+
     model.setObjective(objective_function, "minimize")
 
     # TODO: Construct Objective Function
@@ -166,6 +225,8 @@ def build_model(data, parameters):
             for item in data['item']:
                 for time in range(1, MAX_TIME):
                     model.addCons(x_sjpt[supplier, warehouse, item, time] <= q_sjpt[supplier, warehouse, item, time] * parameters['Cap_p'][item])
+                    model.addCons(w_jkpt[warehouse, destination, item, time] <= o_jkpt[warehouse, destination, item, time] *
+                                  parameters['Cap_p'][item])
 
     # Constraint: Supplier capacity
     mc.mcprint(text="Constraint: Supplier capacity")
