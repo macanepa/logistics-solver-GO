@@ -38,7 +38,7 @@ Si el software no se abre correctamente, recibiendo un mensaje de error o simple
 se abre y se cierra la consola, es posible que no posea instalado alguno de los pre-requisitos
 antes mencionados. Refiérase a ellos. Si continúa teniendo problemas, contáctese con
 nuestro equipo de soporte al correo electrónico
-[macanepa@miuandes.cl](macanepa@miuandes.cl) o bien al número telefónico (+56 9 9278 1334)
+[macanepa@miuandes.cl](macanepa@miuandes.cl).
 
 ## Manual de Usuario
 El manual de usuario se encuentra en un formato de video. Para visualizarlo, diríjase a la
